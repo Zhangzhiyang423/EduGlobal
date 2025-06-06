@@ -81,38 +81,48 @@ University: University of Malaya
 GitHub: @Zhangzhiyang423
 
 
+````markdown
 ## 🚀 Conventional Commits
 
 ### Commit Message Format
 
 ```plaintext
 <type>(<scope>): <message>
-<type>: Type of change (e.g., feat, fix)
+````
 
-<scope>: Optional, specifies the area of the code (e.g., auth, navbar)
+* **`<type>`**: Type of change (e.g., `feat`, `fix`)
+* **`<scope>`**: Optional, specifies the area of the code (e.g., `auth`, `navbar`)
+* **`<message>`**: A short description of the change
 
-<message>: A short description of the change
+### Commit Types
 
-Commit Types
-feat: A new feature
+* `feat`: A new feature
+* `fix`: A bug fix
+* `docs`: Documentation updates
+* `style`: Formatting changes (no impact on functionality)
+* `refactor`: Code refactor (no functional change)
+* `perf`: Performance improvements
+* `test`: Add or update tests
+* `chore`: Routine tasks
 
-fix: A bug fix
+### Example
 
-docs: Documentation updates
-
-style: Formatting changes (no impact on functionality)
-
-refactor: Code refactor (no functional change)
-
-perf: Performance improvements
-
-test: Add or update tests
-
-chore: Routine tasks
-
-Example
-plaintext
-Copy
+```plaintext
 feat(navbar): add dropdown menu
 fix(auth): resolve broken link
 docs(readme): update setup instructions
+```
+
+---
+
+### Benefits:
+
+* Clear, consistent commit messages
+* Makes it easier to understand project changes
+* Helps automate versioning and changelogs
+
+```
+
+This version should work well and display consistently when you copy and paste it into your **README.md**.
+```
+
