@@ -1,0 +1,82 @@
+# 🎓 EduGlobal – Student Advisory Platform
+
+**EduGlobal** is an AI-powered web platform designed to help Malaysian students make smarter decisions about university program selection, financial planning, and career forecasting.
+
+> This project is developed as part of my final year academic project at University of Malaya.
+
+---
+
+## 🚀 Features
+
+- 🧠 AI-assisted course recommendation (prototype design)
+- 📊 Financial and career forecasting
+- 📱 Fully responsive UI with Bootstrap 5
+- 🎯 Simple and intuitive design based on user flow
+- ✅ Pages included: Create Account, Login, Home, Reset Password
+
+---
+
+## 🗂️ Project Structure
+## 📁 Project Structure
+
+- `home.html` — Home page
+- `login.html` — Login page
+- `create-account.html` — Account registration page
+- `create-account-success.html` — Registration success
+- `reset-password.html` — Reset password form
+- `reset-password-success.html` — Reset success
+
+- `styles/` — All CSS files
+  - `home.css`
+  - `login.css`
+  - `create-account.css`
+  - `create-account-success.css`
+  - `reset-password.css`
+  - `reset-password-success.css`
+
+- `assets/` — Images and icons
+  - `logo.png`
+  - `student1.png`
+  - `student2.png`
+  - `home-banner.jpg`
+  - `icon-courses.svg`, `icon-experts.svg`, `icon-unlock.svg`
+  - `bg-shapes/`
+    - `triangle.svg`
+    - `circle.svg`
+
+- `README.md` — Project description
+- `.gitignore` — Git ignore rules
+
+---
+
+## 🛠️ Tech Stack
+
+- **HTML5**
+- **CSS3**
+- **Bootstrap 5**
+- **Google Fonts (Montserrat)**
+- Git + GitHub
+
+---
+
+## 🔧 How to Run Locally
+
+```bash
+git clone https://github.com/Zhangzhiyang423/EduGlobal.git
+cd EduGlobal
+# Open home.html in browser
+
+🌐 GitHub Pages DeploymentTo view the live version (if deployed via GitHub Pages):
+https://zhangzhiyang423.github.io/EduGlobal/
+(Go to GitHub > Settings > Pages > Deploy from branch to activate)
+
+📄 License
+This project is for educational and academic use only.
+No commercial use is allowed without permission.
+
+👤 Author
+Name: Zhang Zhiyang
+
+University: University of Malaya
+
+GitHub: @Zhangzhiyang423
