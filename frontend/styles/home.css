@@ -193,3 +193,6 @@ h2 {
   background-color: #fff;
   color: #5246AA;
 }
+html {
+    scroll-behavior: smooth;
+}
