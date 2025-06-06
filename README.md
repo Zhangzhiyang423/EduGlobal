@@ -80,3 +80,46 @@ Name: Zhang Zhiyang
 University: University of Malaya
 
 GitHub: @Zhangzhiyang423
+
+
+🚀 Conventional Commits
+Commit Message Format
+plaintext
+Copy
+<type>(<scope>): <message>
+<type>: The type of change (e.g., feat, fix, docs)
+
+<scope>: Optional, defines the area of change (e.g., auth, navbar)
+
+<message>: A brief description of the change
+
+Commit Types
+feat: A new feature
+
+fix: A bug fix
+
+docs: Documentation changes
+
+style: Style changes (no functionality impact)
+
+refactor: Code refactoring (no functionality change)
+
+perf: Performance improvements
+
+test: Adding or modifying tests
+
+chore: Routine tasks (e.g., build, config)
+
+Examples
+feat(auth): add login page
+
+fix(navbar): resolve broken link
+
+docs(readme): update setup instructions
+
+Benefits
+Clear, consistent commit messages
+
+Automated changelog generation
+
+Better collaboration and version tracking
