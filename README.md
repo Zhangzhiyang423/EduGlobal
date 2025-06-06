@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/319f6e5f-c9df-454f-8792-d0cd350569f1)# 🎓 EduGlobal – Student Advisory Platform
+🎓 EduGlobal – Student Advisory Platform
 
 **EduGlobal** is an AI-powered web platform designed to help Malaysian students make smarter decisions about university program selection, financial planning, and career forecasting.
 
