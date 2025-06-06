@@ -1,0 +1,167 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text-brown {
+    color: #8B4513;
+}
+
+.btn-main {
+    background-color: #5246AA;
+    color: white;
+    border-radius: 10px;
+    padding: 8px 18px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.btn-main:hover {
+    background-color: #443b91;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom,
+            rgba(7, 20, 45, 0.9) 0%,
+            rgba(7, 20, 45, 0.75) 35%,
+            rgba(7, 20, 45, 0.2) 80%,
+            rgba(7, 20, 45, 0) 100%),
+        url('../assets/home-banner.jpg') center center / cover no-repeat;
+
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.btn-advisory {
+    background-color: #FCF3CA;
+    color: #333;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-advisory:hover {
+    background-color: #f5e9b0;
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+}
+
+/* Feature box styling */
+h2 {
+    color: #073E87;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Custom Feature Section Colors */
+.bg-teal {
+    background-color: #6FA5B1;
+}
+
+.bg-purple {
+    background-color: #878ECD;
+}
+
+.feature-card {
+    border-radius: 16px;
+    transition: transform 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+}
+
+.bg-primary-blue {
+    background-color: #073E87;
+    color: white;
+}
+
+.text-primary-blue {
+    color: #073E87;
+}
+
+.program-img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}
+
+/* White Icon Circle */
+.icon-circle {
+    background: white;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Blue Title for h2*/
+.text-primary-blue {
+    color: #073E87;
+}
+
+/* Main Testimonial Box */
+.testimonial-box {
+    max-width: 680px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    text-align: left;
+}
+
+/* Avatar */
+.testimonial-avatar {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px #073E87;
+}
+
+/* Colored dots */
+.testimonial-feedback li {
+    list-style: none;
+    margin-bottom: 0.75rem;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.dot.green {
+    background-color: #00cc44;
+}
+
+.dot.blue {
+    background-color: #007bff;
+}
+
+.dot.red {
+    background-color: #cc0000;
+}
+.testimonials {
+  padding-bottom: 80px;
+}
+
+/* Navigation Active Status Color */
+.nav-link.active {
+    color: #073E87 !important;
+    font-weight: 600;
+}

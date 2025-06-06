@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduGlobal - Home</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles/home.css" />
+</head>
+
+<body>
+
+    <!-- ✅ Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top py-2">
+        <div class="container">
+
+            <!-- 🔵 Left: Logo -->
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="../assets/logo.png" alt="EduGlobal" height="40" />
+            </a>
+
+            <!-- 🔵 Hamburger menu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 🔵 Collapsible content -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <!-- Center nav links -->
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Program Recommendation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Financial & Job</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                </ul>
+
+                <!-- Right button -->
+                <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
+                    <a href="#" class="btn btn-main">Get Start</a>
+                    <i class="bi bi-search fs-5 text-dark"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ✅ Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="fw-bold display-5 mb-4">Make Smarter Decisions for Your Education and Career</h1>
+            <p class="lead mb-4">
+                EduGlobal is an AI-powered platform that helps Malaysian students choose the best university program by
+                analyzing academic background, financial capability, and career prospects.
+            </p>
+            <a href="#" class="btn btn-advisory px-4 py-2">Advisory Service</a>
+        </div>
+    </section>
+
+
+
+    <!-- ✅ Features Overview -->
+    <section class="py-5 feature-section position-relative" style="background-color: #f8f9fa;">
+        <div class="container text-center">
+            <h2 class="text-primary-blue fw-bold">What we provide for you</h2>
+            <div class="row g-4 justify-content-center">
+
+                <!-- Feature Card 1 -->
+                <div class="col-md-4">
+                    <div class="feature-card bg-teal text-white p-4 rounded-4 h-100">
+                        <div class="icon-circle mx-auto mb-3">
+                            <img src="../assets/icon-courses.svg" alt="Courses Icon" width="36" />
+                        </div>
+                        <h5 class="fw-bold">+1000 Courses</h5>
+                        <p class="small mb-0">Explore a wide range of courses in all fields</p>
+                    </div>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div class="col-md-4">
+                    <div class="feature-card bg-purple text-white p-4 rounded-4 h-100">
+                        <div class="icon-circle mx-auto mb-3">
+                            <img src="../assets/icon-experts.svg" alt="Experts Icon" width="36" />
+                        </div>
+                        <h5 class="fw-bold">Industry Experts</h5>
+                        <p class="small mb-0">Professional content introduced by the best experts</p>
+                    </div>
+                </div>
+
+                <!-- Feature Card 3 -->
+                <div class="col-md-4">
+                    <div class="feature-card bg-teal text-white p-4 rounded-4 h-100">
+                        <div class="icon-circle mx-auto mb-3">
+                            <img src="../assets/icon-unlock.svg" alt="Access Icon" width="36" />
+                        </div>
+                        <h5 class="fw-bold">Unlimited Access</h5>
+                        <p class="small mb-0">Access all courses with one click and with free fees</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ✅ Program Recommendation Section -->
+    <section class="py-5 bg-light-blue">
+        <div class="container d-md-flex align-items-center">
+            <div class="me-md-5">
+                <img src="../assets/student1.png" alt="Student" class="img-fluid program-img" />
+            </div>
+            <div>
+                <h3 class="text-primary-blue fw-bold">Personalized Program Recommendations</h3>
+                <p>Get tailored suggestions from UM programs that best fit your academic profile, interests, and
+                    preferences.</p>
+                <a href="#" class="btn btn-main">Explore</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Financial Planning Section -->
+    <section class="py-5" style="background-color: #f0f4f8;">
+        <div class="container d-md-flex align-items-center flex-row-reverse">
+            <div class="ms-md-5">
+                <img src="../assets/student2.png" alt="Student" class="img-fluid program-img" />
+            </div>
+            <div>
+                <h3 class="text-primary-blue fw-bold">Financial Planning & Job Forecasting</h3>
+                <p>Compare tuition fees and projected graduate earnings to maximize your return on investment.</p>
+                <a href="#" class="btn btn-main">Explore</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Card -->
+    <div class="testimonial-box mx-auto position-relative p-4">
+
+        <!-- Avatar + Name -->
+        <div class="d-flex align-items-center mb-3">
+            <img src="../assets/student-avatar.jpg" class="rounded-circle testimonial-avatar me-3" alt="Student" />
+            <div class="text-start">
+                <div class="fw-bold">Anna Black</div>
+                <small>Bachelor of Computer Science – Universiti Malaya</small>
+            </div>
+        </div>
+
+        <!-- Feedback List -->
+        <ul class="text-start ps-0 mb-4 testimonial-feedback">
+            <li><span class="dot green"></span> "Lecturers are really supportive and the curriculum is
+                industry-relevant!"</li>
+            <li><span class="dot blue"></span> "Good balance between theory and hands-on projects."</li>
+            <li><span class="dot red"></span> "KL living cost is quite high, so budgeting is important."</li>
+        </ul>
+
+        <!-- Rating -->
+        <div class="text-end text-success mb-2">
+            ⭐⭐⭐⭐⭐
+        </div>
+
+        <!-- Footer -->
+        <div class="border-top pt-2 text-start mb-3">
+            <strong>EduGlobal</strong><br />
+            <small class="text-muted">eduglobal.com</small>
+        </div>
+
+        <!-- Button -->
+        <div class="text-center">
+            <a href="#" class="btn btn-main btn-sm">See other comments</a>
+        </div>
+
+    </div>
+
+
+    <!-- ✅ Footer -->
+    <footer class="bg-dark text-white pt-4">
+        <div class="container text-center small">
+            <p>&copy; 2025 EduGlobal. All rights reserved.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#" class="text-white text-decoration-none">Privacy</a>
+                <a href="#" class="text-white text-decoration-none">Terms</a>
+                <a href="#" class="text-white text-decoration-none">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.left-panel {
+  background-color: #878ECD;
+  color: white;
+  padding: 4rem 2rem;
+  height: 100vh;
+}
+
+.left-panel h1 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.form-section {
+  padding: 4rem 2rem;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.divider:not(:empty)::before {
+  margin-right: .75em;
+}
+
+.divider:not(:empty)::after {
+  margin-left: .75em;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.tab-toggle {
+  font-weight: 500;
+  color: #888;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+  cursor: pointer;
+}
+
+.tab-toggle.active {
+  color: #333;
+  border-color: #4f46e5;
+}
+
+.form-control::placeholder {
+  color: #aaa;
+}
+
+h4 {
+  color: #073E87;
+}
+.btn-main {
+  background-color: #5246AA;
+  color: white;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 10px 20px;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-main:hover {
+  background-color: #443b91;
+  color: white;
+}
+.forgot-password-link {
+  color: #073E87;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
