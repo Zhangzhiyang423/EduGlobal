@@ -17,7 +17,6 @@
 ---
 
 ## 🗂️ Project Structure
-## 📁 Project Structure
 
 - `home.html` — Home page
 - `login.html` — Login page
@@ -82,7 +81,7 @@ University: University of Malaya
 GitHub: @Zhangzhiyang423
 
 
-🚀 Conventional Commits
+## 🚀 Conventional Commits
 Commit Message Format
 plaintext
 Copy
