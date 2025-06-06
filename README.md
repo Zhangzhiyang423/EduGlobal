@@ -80,15 +80,7 @@ University: University of Malaya
 
 GitHub: @Zhangzhiyang423
 
-
-````markdown
-## 🚀 Conventional Commits
-
-### Commit Message Format
-
-```plaintext
-<type>(<scope>): <message>
-````
+Conventional Commits
 
 * **`<type>`**: Type of change (e.g., `feat`, `fix`)
 * **`<scope>`**: Optional, specifies the area of the code (e.g., `auth`, `navbar`)
