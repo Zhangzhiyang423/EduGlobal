@@ -1,4 +1,4 @@
-# 🎓 EduGlobal – Student Advisory Platform
+![image](https://github.com/user-attachments/assets/319f6e5f-c9df-454f-8792-d0cd350569f1)# 🎓 EduGlobal – Student Advisory Platform
 
 **EduGlobal** is an AI-powered web platform designed to help Malaysian students make smarter decisions about university program selection, financial planning, and career forecasting.
 
@@ -17,7 +17,6 @@
 ---
 
 ## 🗂️ Project Structure
-## 📁 Project Structure
 
 - `home.html` — Home page
 - `login.html` — Login page
@@ -60,7 +59,6 @@
 ---
 
 ## 🔧 How to Run Locally
-
 ```bash
 git clone https://github.com/Zhangzhiyang423/EduGlobal.git
 cd EduGlobal
@@ -75,8 +73,51 @@ This project is for educational and academic use only.
 No commercial use is allowed without permission.
 
 👤 Author
-Name: Zhang Zhiyang
+Name: Zhang Zhiyang   
 
 University: University of Malaya
 
 GitHub: @Zhangzhiyang423
+
+
+
+
+
+## Conventional Commits (Standard)
+
+* **`<type>`**: Type of change (e.g., `feat`, `fix`)
+* **`<scope>`**: Optional, specifies the area of the code (e.g., `auth`, `navbar`)
+* **`<message>`**: A short description of the change
+
+### Commit Types
+
+* `feat`: A new feature
+* `fix`: A bug fix
+* `docs`: Documentation updates
+* `style`: Formatting changes (no impact on functionality)
+* `refactor`: Code refactor (no functional change)
+* `perf`: Performance improvements
+* `test`: Add or update tests
+* `chore`: Routine tasks
+
+### Example
+
+```plaintext
+feat(navbar): add dropdown menu
+fix(auth): resolve broken link
+docs(readme): update setup instructions
+```
+
+---
+
+### Benefits:
+
+* Clear, consistent commit messages
+* Makes it easier to understand project changes
+* Helps automate versioning and changelogs
+
+```
+
+This version should work well and display consistently when you copy and paste it into your **README.md**.
+```
+
