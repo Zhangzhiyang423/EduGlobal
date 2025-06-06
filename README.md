@@ -74,44 +74,42 @@ This project is for educational and academic use only.
 No commercial use is allowed without permission.
 
 👤 Author
-Name: Zhang Zhiyang
+Name: Zhang Zhiyang   
 
 University: University of Malaya
 
 GitHub: @Zhangzhiyang423
 
 
-## 🚀 Conventional Commits  
+## 🚀 Conventional Commits
+
+```bash
 Commit Message Format
 plaintext
 Copy
 <type>(<scope>): <message>
-<type>: The type of change (e.g., feat, fix, docs)
+<type>: Type of change (e.g., feat, fix)
 
-<scope>: Optional, defines the area of change (e.g., auth, navbar)
+<scope>: Optional, specifies the area of the code (e.g., auth, navbar)
 
-<message>: A brief description of the change
+<message>: A short description of the change
 
 Commit Types
 feat: A new feature
 
 fix: A bug fix
 
-docs: Documentation changes
+docs: Documentation updates
 
-style: Style changes (no functionality impact)
+style: Formatting changes (no impact on functionality)
 
-refactor: Code refactoring (no functionality change)
+refactor: Code refactor (no functional change)
 
 perf: Performance improvements
 
-test: Adding or modifying tests
+test: Add or update tests
 
-chore: Routine tasks (e.g., build, config)
-
-Examples
-feat(auth): add login page
-
+chore: Routine tasks
 fix(navbar): resolve broken link
 
 docs(readme): update setup instructions
