@@ -59,7 +59,6 @@
 ---
 
 ## 🔧 How to Run Locally
-
 ```bash
 git clone https://github.com/Zhangzhiyang423/EduGlobal.git
 cd EduGlobal
@@ -80,7 +79,11 @@ University: University of Malaya
 
 GitHub: @Zhangzhiyang423
 
-Conventional Commits
+
+
+
+
+## Conventional Commits (Standard)
 
 * **`<type>`**: Type of change (e.g., `feat`, `fix`)
 * **`<scope>`**: Optional, specifies the area of the code (e.g., `auth`, `navbar`)
