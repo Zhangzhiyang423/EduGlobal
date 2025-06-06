@@ -165,3 +165,31 @@ h2 {
     color: #073E87 !important;
     font-weight: 600;
 }
+/* Footer background color */
+.bg-footer {
+  background-color: #8A79AF; 
+}
+
+.text-brown {
+  color: #6A3E1D;
+}
+
+/* Socical Meida Icon */
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: white;
+  color: #8A79AF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: #fff;
+  color: #5246AA;
+}
