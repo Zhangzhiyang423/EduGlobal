@@ -6,9 +6,9 @@ document.getElementById('getRecommendation').addEventListener('click', function(
     setTimeout(function() {
         // 这是模拟推荐的课程数据
         const recommendedPrograms = [
-            { title: "Bachelor of Information Systems", description: "A program for students interested in information systems and technology." },
-            { title: "Bachelor of Software Engineering", description: "A program focusing on the development of software systems." },
-            { title: "Bachelor of Artificial Intelligence", description: "A program focused on machine learning and AI technologies." },
+            { id: 1, title: "Bachelor of Information Systems", description: "A program for students interested in information systems and technology." },
+            { id: 2, title: "Bachelor of Software Engineering", description: "A program focusing on the development of software systems." },
+            { id: 3, title: "Bachelor of Artificial Intelligence", description: "A program focused on machine learning and AI technologies." },
         ];
 
         // 获取推荐区的程序列表容器
@@ -18,15 +18,15 @@ document.getElementById('getRecommendation').addEventListener('click', function(
         // 根据推荐的程序填充内容
         recommendedPrograms.forEach(function(program) {
             const programCard = document.createElement('div');
-            programCard.classList.add('col-md-4', 'mb-4');  // 使卡片按列排列
+            programCard.classList.add('col-md-4');
+            programCard.classList.add('mb-4');
             programCard.innerHTML = `
-                <div class="program-card">
-                    <div class="card h-100">
-                        <img src="../assets/program.jpg" class="card-img-top" alt="Program Image">
-                        <div class="card-body">
-                            <h5 class="card-title">${program.title}</h5>
-                            <p class="card-text">${program.description}</p>
-                        </div>
+                <div class="card">
+                    <img src="../assets/program.jpg" class="card-img-top" alt="${program.title}">
+                    <div class="card-body">
+                        <h5 class="card-title">${program.title}</h5>
+                        <p class="card-text">${program.description}</p>
+                        <a href="program-details.html?programId=${program.id}" class="btn btn-primary">View Details</a>
                     </div>
                 </div>
             `;
@@ -34,6 +34,6 @@ document.getElementById('getRecommendation').addEventListener('click', function(
         });
 
         // 显示推荐部分
-        document.getElementById('aiRecommendationProgram').classList.add('show');
+        document.getElementById('aiRecommendationProgram').style.display = 'block';
     }, 1000); // 模拟加载时间
 });

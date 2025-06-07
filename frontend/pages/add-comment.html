@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog - EduGlobal</title>
+    <title>Add Comment - EduGlobal</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -14,7 +14,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../styles/home.css" />
-
+    
     <!-- Footer CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
@@ -23,14 +23,20 @@
     <!-- ✅ Navbar -->
     <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top py-2">
         <div class="container">
+            <!-- Logo -->
             <a class="navbar-brand d-flex align-items-center gap-2" href="home.html">
                 <img src="../assets/logo.png" alt="EduGlobal" height="40" />
             </a>
+
+            <!-- Hamburger menu -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Collapsible content -->
             <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <!-- Nav links -->
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4">
                     <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="program-recommendation.html">Program
@@ -41,114 +47,41 @@
                     <li class="nav-item"><a class="nav-link" href="profile-1.html">Profile</a></li>
                     <li class="nav-item"><a class="nav-link" href="#footer">About Us</a></li>
                 </ul>
+                <!-- Log In Button -->
                 <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
                     <a href="login.html" class="btn btn-main">Log In</a>
+                    <i class="bi bi-search fs-5 text-dark"></i>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- ✅ Hero Section -->
-    <section class="hero">
-        <!-- Gradient Overlay -->
-        <div class="overlay"></div>
-
-        <div class="container position-relative z-index-2">
-            <h1 class="fw-bold display-5 text-white mb-4">What Do Students Really Think?</h1>
-            <p class="lead text-white mb-4">
-                Discover real student opinions and experiences through sentiment analysis from social media, reviews,
-                and surveys. See how your preferred programs are perceived by others.
-            </p>
-            <div class="input-group mb-4">
-                <input type="text" class="form-control" placeholder="Search" />
-                <button class="btn btn-main">Search</button>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ✅ Blog Content Section -->
-    <section class="blog-content py-5">
+    <!-- ✅ Add Comment Form Section -->
+    <section class="add-comment-section py-5">
         <div class="container">
-            <!-- ✅ Filter by Program Section -->
-            <div class="row mb-4">
-                <div class="col-md-6">
-                    <h5 class="text-primary-blue">Filter by Program</h5>
-                    <select id="programFilter" class="form-select">
-                        <option value="">Select Program</option>
-                        <option value="information-systems">Bachelor of Information Systems</option>
-                        <option value="software-engineering">Bachelor of Software Engineering</option>
-                        <option value="artificial-intelligence">Bachelor of Artificial Intelligence</option>
-                        <option value="data-science">Bachelor of Data Science</option>
-                        <!-- Add more programs as needed -->
-                    </select>
-                </div>
-                <div class="col-md-6">
-                    <h5 class="text-primary-blue">Sort by</h5>
-                    <select class="form-select">
-                        <option value="latest">Latest</option>
-                        <option value="top-news">Top News</option>
-                    </select>
-                </div>
-            </div>
+            <h2 class="text-primary-blue text-center mb-4">Add Comment</h2>
 
-            <!-- Blog Articles Section -->
-            <div class="row">
-                <!-- Article 1 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="../assets/program.jpg" class="card-img-top" alt="Article Image">
-                        <div class="card-body">
-                            <h5 class="card-title">UM Engineering Students Praise Internship Opportunities</h5>
-                            <p class="card-text">Many Year 3 students in the Faculty of Engineering report strong
-                                internship support and hands-on experience with industry partners.</p>
-                            <p class="text-muted">Dec 5, 2023 by Alysha</p>
-                            <a href="full-comment.html?article_id=1" class="btn btn-outline-primary">Read More</a>
-                            <!-- Link to Full Comment Page with article_id -->
-                        </div>
-                    </div>
+            <!-- Comment Form -->
+            <form id="commentForm">
+                <div class="mb-4">
+                    <label for="commentTitle" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="commentTitle" placeholder="Title of your comment"
+                        required>
                 </div>
 
-                <!-- Article 2 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="../assets/program.jpg" class="card-img-top" alt="Article Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Cost of Living in KL a Challenge, Say Year 1 Students</h5>
-                            <p class="card-text">Freshers share the academic journey, many highlight financial stress
-                                and major living expenses.</p>
-                            <p class="text-muted">Dec 6, 2023 by Joe Dee</p>
-                            <a href="full-comment.html?article_id=2" class="btn btn-outline-primary">Read More</a>
-                            <!-- Link to Full Comment Page with article_id -->
-                        </div>
-                    </div>
+                <div class="mb-4">
+                    <label for="commentBody" class="form-label">Write the latest updates</label>
+                    <textarea class="form-control" id="commentBody" rows="4" placeholder="Write the latest updates"
+                        required></textarea>
                 </div>
 
-                <!-- Article 3 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="../assets/program.jpg" class="card-img-top" alt="Article Image">
-                        <div class="card-body">
-                            <h5 class="card-title">UM Business School Receives Positive Feedback on Case-Based Learning
-                            </h5>
-                            <p class="card-text">Students say the interactive class and real-world business cases make
-                                learning engaging and impactful.</p>
-                            <p class="text-muted">Nov 10, 2023 by Muhammad Danish</p>
-                            <a href="full-comment.html?article_id=3" class="btn btn-outline-primary">Read More</a>
-                            <!-- Link to Full Comment Page with article_id -->
-                        </div>
-                    </div>
+                <div class="mb-4">
+                    <button type="button" class="btn btn-purple w-100" onclick="submitForm()">Post</button>
+                    <!-- Call submitForm function on click -->
                 </div>
-            </div>
-
-            <!-- Load More Articles Button and Add Comment Button -->
-            <div class="text-center mt-4">
-                <button class="btn btn-blue">Load more articles</button>
-                <a href="add-comment.html" class="btn btn-purple ms-3">Add Comment</a>
-            </div>
+            </form>
         </div>
     </section>
-
 
     <!-- ✅ Footer (Unified) -->
     <footer id="footer" class="footer bg-footer text-white pt-5 pb-4">
@@ -201,6 +134,16 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Function to handle form submission and redirect to "Add Comment Done" page
+        function submitForm() {
+            // Assuming the form has been filled and is ready to be submitted
+            // Redirect to the "Add Comment Done" page
+            window.location.href = "add-comment-done.html";
+        }
+    </script>
+
 </body>
 
 </html>
