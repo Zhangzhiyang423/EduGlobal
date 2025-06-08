@@ -68,11 +68,12 @@ h2 {
 
 /* Custom Feature Section Colors */
 .bg-teal {
-    background-color: #6FA5B1;
+    background-color: #6FA5B1 !important;
 }
 
+
 .bg-purple {
-    background-color: #878ECD;
+    background-color: #878ECD !important;
 }
 
 .feature-card {
@@ -82,6 +83,20 @@ h2 {
 
 .feature-card:hover {
     transform: translateY(-6px);
+}
+/* 只对第一张卡片（+1000 Courses）中的文字加粗 */
+.course-card h5, .course-card p {
+    font-weight: bold;
+}
+
+/* 只对第二张卡片（Industry Experts）中的文字加粗 */
+.expert-card h5, .expert-card p {
+    font-weight: bold;
+}
+
+/* 只对第三张卡片（Unlimited Access）中的文字加粗 */
+.access-card h5, .access-card p {
+    font-weight: bold;
 }
 
 .bg-primary-blue {
@@ -205,7 +220,7 @@ html {
 
 
 /* Program Details Banner Section */
-.program-details-banner {
+.program-details .program-details-banner {
     position: relative;
     width: 100%;
     height: 500px; /* 控制Banner的高度 */
@@ -347,6 +362,7 @@ html {
 
 /* ✅ Program Recommendation CSS */
 
+
 /*Hero Section */
 .hero {
     background: linear-gradient(to bottom,
@@ -460,9 +476,9 @@ html {
 
 /*✅ Financial Details Page CSS*/
 
+
+
 /* Hero Section CSS */
-
-
 /* Banner*/
 
 .hero-financial-job {
@@ -635,7 +651,7 @@ html {
 
 
 /* Dashboard Banner Section */
-.dashboard-banner {
+.dashboard .dashboard-banner {
     position: relative;
     width: 100%;
     height: 500px; /* 控制Banner的高度 */
@@ -643,7 +659,7 @@ html {
 }
 
 /* Title and Description Overlay */
-.overlay {
+.dashboard .overlay {
     position: absolute;
     top: 50%;  /* 使文字垂直居中 */
     left: 50%;  /* 使文字水平居中 */
@@ -657,29 +673,31 @@ html {
 }
 
 /* Dashboard Title */
-.dashboard-title {
+.dashboard .dashboard-title {
     font-size: 48px; /* 设置标题大小 */
     font-weight: bold;
 }
 
 /* Dashboard Description */
-.dashboard-banner p {
+.dashboard .dashboard-banner p {
     font-size: 22px; /* 设置副标题字体大小 */
 }
 
 /* Banner Image */
-.dashboard-banner img {
+.dashboard .dashboard-banner img {
     width: 100%;
     height: 100%;
     object-fit: cover;  /* 确保图片覆盖整个Banner区域 */
 }
 
 /* Ensure overlay is within the height of the banner */
-.container.position-relative {
+.dashboard .container.position-relative {
     height: 100%; /* 使容器填充整个Banner高度 */
 }
 
 /* ✅ Blog CSS */
+
+
 /*Hero Section */
 .hero {
     background: linear-gradient(to bottom,
@@ -718,7 +736,7 @@ audio {
 }
 /* Card Styling */
 .card {
-    width: 100%;
+    width: 80%;
     height: 100%; /* Ensure all cards have the same height */
     display: flex;
     flex-direction: column; /* Allow content to stack vertically */
@@ -759,48 +777,8 @@ audio {
     object-fit: cover; /* Ensure image covers the top part of the card */
 }
 
-/* Button */
-.btn-outline-primary {
-    width: 100%;
-    padding: 12px 0;
-    text-align: center;
-    border-radius: 5px;
-}
-/* Load More Articles Button Styling */
-.btn-blue {
-    background-color: #007bff; /* Blue color for the button */
-    color: white;
-    padding: 12px 30px;
-    border-radius: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 14px;
-    border: none;
-    transition: all 0.3s ease;
-}
-
-.btn-blue:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add shadow for hover effect */
-}
 
 /* Add Comment Button Styling */
-.btn-purple {
-    background-color: #5246AA; /* Purple color for the button */
-    color: white;
-    padding: 12px 30px;
-    border-radius: 30px; /* Rounded corners */
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 14px;
-    border: none;
-    transition: all 0.3s ease;
-}
-
-.btn-purple:hover {
-    background-color: #5e3ae8; /* Slightly darker purple on hover */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Add shadow for hover effect */
-}
 
 /* Space between the buttons */
 .ms-3 {
@@ -891,22 +869,7 @@ footer {
 }
 
 /* Go Back Button */
-.btn-purple {
-    background-color: #007bff; /* Purple color for the button */
-    color: white;
-    padding: 12px 30px;
-    border-radius: 30px; /* Rounded corners */
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 14px;
-    border: none;
-    transition: all 0.3s ease;
-}
 
-.btn-purple:hover {
-    background-color: #0056b3; /* Slightly darker purple on hover */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Add shadow for hover effect */
-}
 /* Success Section Styling */
 .success-section {
     background-color: #f8f9fa;
@@ -936,20 +899,6 @@ footer {
     font-size: 1.25rem;
     color: #333;
     margin-bottom: 20px;
-}
-
-.success-box .btn {
-    background-color: #007bff; /* Primary button color */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-.success-box .btn:hover {
-    background-color: #0056b3;
-    transition: 0.3s;
 }
 
 /* ✅ Profile-1 CSS */

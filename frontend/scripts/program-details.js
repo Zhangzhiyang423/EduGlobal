@@ -23,3 +23,19 @@ document.addEventListener('DOMContentLoaded', function () {
         programDescription.textContent = "The selected program details are not available.";
     }
 });
+
+
+// search the matching program
+
+// Get the URL parameters
+const urlParams = new URLSearchParams(window.location.search);
+
+// Get the 'search' parameter
+const programName = urlParams.get('search');
+
+if (programName) {
+    // Display the program name or use it to fetch program details
+    console.log("Searching for: " + programName);
+} else {
+    console.log("No program name provided.");
+}

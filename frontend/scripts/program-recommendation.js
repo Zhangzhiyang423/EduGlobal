@@ -1,3 +1,22 @@
+// search program button
+function searchProgram() {
+    // Get the value from the search input field
+    const searchQuery = document.getElementById('searchInput').value.trim();
+
+    // If there's a search query, construct the URL and navigate to it
+    if (searchQuery) {
+        // You can add more logic to process the search query if needed (e.g., encoding spaces, special characters)
+        const targetURL = `program-details.html?search=${encodeURIComponent(searchQuery)}`;
+        window.location.href = targetURL;
+    } else {
+        alert("Please enter a program name.");
+    }
+}
+
+
+
+
+// get Ai recommendation section
 document.getElementById('getRecommendation').addEventListener('click', function() {
     // 滚动到 AI 推荐区域
     document.getElementById('aiRecommendationProgram').scrollIntoView({ behavior: 'smooth' });
@@ -26,7 +45,7 @@ document.getElementById('getRecommendation').addEventListener('click', function(
                     <div class="card-body">
                         <h5 class="card-title">${program.title}</h5>
                         <p class="card-text">${program.description}</p>
-                        <a href="program-details.html?programId=${program.id}" class="btn btn-primary">View Details</a>
+                        <a href="program-details.html?programId=${program.id}" class="btn btn-outline-primary">View Details</a>
                     </div>
                 </div>
             `;
