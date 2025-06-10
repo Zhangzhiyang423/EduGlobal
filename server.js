@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const userRoutes = require('./routes/user');
 const cors = require('cors');
+const path = require('path');
 
 // 加载环境变量
 dotenv.config();
@@ -25,6 +26,9 @@ app.use(cors({
 
 // 中间件：解析 JSON 请求体
 app.use(express.json());
+
+// 处理静态文件（前端文件）
+app.use(express.static(path.join(__dirname, 'frontend'))); // 根据你的项目结构，路径可以调整
 
 // 连接 MongoDB
 mongoose.connect(process.env.MONGO_URI, {

@@ -1,33 +1,45 @@
-// login.js
+window.addEventListener('DOMContentLoaded', (event) => {
+    const loginButton = document.querySelector('button');  // 确保选择到正确的按钮
+    console.log(loginButton);  // 确认是否选择到了正确的按钮
 
-document.querySelector('button').addEventListener('click', async function () {
-    // 获取用户输入的邮箱和密码
-    const email = document.querySelector('input[type="email"]').value;
-    const password = document.querySelector('input[type="password"]').value;
+    if (loginButton) {
+        loginButton.addEventListener('click', async function (event) {
+            event.preventDefault();  // 阻止表单提交行为
 
-    // 验证邮箱和密码不能为空
-    if (!email || !password) {
-        alert("Please enter both email and password");
-        return;
-    }
+            console.log("Login button clicked");  // 打印日志，确认按钮点击事件触发
 
-    // 发送 POST 请求到后端的登录接口
-    const response = await fetch('http://localhost:3000/api/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',  // 设置请求体为 JSON 格式
-        },
-        body: JSON.stringify({ email, password })  // 将邮箱和密码作为请求体发送
-    });
+            const email = document.querySelector('input[type="email"]').value;
+            const password = document.querySelector('input[type="password"]').value;
 
-    const data = await response.json();  // 解析 JSON 响应
+            // 验证邮箱和密码不为空
+            if (!email || !password) {
+                alert("Please enter both email and password");
+                return;
+            }
 
-    if (response.status === 200) {
-        // 登录成功，存储返回的 JWT token
-        localStorage.setItem('token', data.token);  // 将 token 存储在 localStorage
-        window.location.href = 'home.html';  // 登录成功后跳转到主页
+            console.log("Sending request to backend");
+
+            // 发送 POST 请求到后端
+            const response = await fetch('http://localhost:3000/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password })  // 将邮箱和密码作为请求体发送
+            });
+
+            const data = await response.json();
+            console.log("Backend response:", data);
+
+            if (response.status === 200) {
+                localStorage.setItem('token', data.token);  // 存储 token
+                console.log('Login successful, redirecting...');
+                window.location.href = 'home.html';  // 登录成功后跳转到主页
+            } else {
+                alert('Login failed: ' + data.message);  // 登录失败提示
+            }
+        });
     } else {
-        // 登录失败，显示错误信息
-        alert('Login failed: ' + data.message);  // 弹出错误信息
+        console.log("Login button not found!");
     }
 });
