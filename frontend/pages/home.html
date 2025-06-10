@@ -46,7 +46,7 @@
                     <li class="nav-item"><a class="nav-link" href="financial-job.html">Financial & Job</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="profile-1.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
                     <li class="nav-item">
                         <a class="nav-link" href="#footer">About Us</a>
                     </li>
@@ -75,9 +75,19 @@
     </section>
 
 
+    <!-- ✅ 欢迎信息弹窗内容 -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <!-- This is where you display the welcome message to the user after successful login -->
+                <h1 id="welcomeMessage"></h1> <!-- Welcome message from the Modal -->
+            </div>
+        </div>
+    </div>
+
 
     <!-- ✅ Features Overview -->
-    <section class="py-5 feature-section position-relative" style="background-color: #f8f9fa;"id="feature-overview">
+    <section class="py-5 feature-section position-relative" style="background-color: #f8f9fa;" id="feature-overview">
         <div class="container text-center">
             <h2 class="text-primary-blue fw-bold">What we provide for you</h2>
             <div class="row g-4 justify-content-center">
@@ -224,7 +234,7 @@
                     <h6 class="text-uppercase fw-bold">Blog</h6>
                     <ul class="list-unstyled">
                         <li><a href="blog.html" class="text-white text-decoration-none">Latest Comments</a></li>
-                        <li><a href="profile-1.html" class="text-white text-decoration-none">My Comments</a></li>
+                        <li><a href="profile.html" class="text-white text-decoration-none">My Comments</a></li>
                     </ul>
                 </div>
 
@@ -255,6 +265,7 @@
         </div>
     </footer>
 
+    <script src="../scripts/home.js"></script> <!-- 主页的 JavaScript -->
     <!-- Bootstrap JS (includes Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
