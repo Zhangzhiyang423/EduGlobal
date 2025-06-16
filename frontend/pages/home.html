@@ -169,10 +169,10 @@
     </section>
 
     <!--✅ Section Wrapper -->
-    <div class="py-5"> 
+    <div class="py-5">
 
         <!-- Section Title -->
-        <div class="text-center mb-5 mt-3"> 
+        <div class="text-center mb-5 mt-3">
             <h2 class="fw-bold fs-3 text-primary-blue">
                 🎓 Student Reviews by Program
             </h2>
@@ -298,9 +298,10 @@
         </div>
     </footer>
 
-    <script src="../scripts/home.js"></script> <!-- 主页的 JavaScript -->
-    <!-- Bootstrap JS (includes Popper.js) -->
+    <!-- 正确顺序：先加载 Bootstrap，后加载 home.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/home.js"></script>
+
 
 </body>
 

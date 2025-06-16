@@ -5,16 +5,15 @@ const userRoutes = require('./routes/user');
 const cors = require('cors');
 const path = require('path');
 
+
 // 加载环境变量
 dotenv.config();
-
-// 初始化 Express 应用
 const app = express();
 
 // 中间件：打印请求信息
 app.use((req, res, next) => {
-    console.log(`Received ${req.method} request from ${req.headers.origin}`);
-    next();  // 调用下一个中间件
+    console.log(`Received ${req.method} request: ${req.originalUrl}`);
+    next();
 });
 
 // 使用 CORS 中间件，允许跨域请求
@@ -28,7 +27,15 @@ app.use(cors({
 app.use(express.json());
 
 // 处理静态文件（前端文件）
-app.use(express.static(path.join(__dirname, 'frontend'))); // 根据你的项目结构，路径可以调整
+app.use(express.static(path.join(__dirname, 'frontend/pages')));
+app.use('/styles', express.static(path.join(__dirname, 'frontend/styles')));
+app.use('/assets', express.static(path.join(__dirname, 'frontend/assets')));
+app.use('/scripts', express.static(path.join(__dirname, 'frontend/scripts')));
+
+
+
+// 用户相关路由
+app.use('/api', userRoutes);
 
 // 连接 MongoDB
 mongoose.connect(process.env.MONGO_URI, {
@@ -40,8 +47,6 @@ mongoose.connect(process.env.MONGO_URI, {
       process.exit(1); // 连接失败就退出
   });
 
-// 用户相关路由
-app.use('/api', userRoutes);
 
 // 启动服务
 const PORT = process.env.PORT || 3000;

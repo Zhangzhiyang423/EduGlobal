@@ -33,6 +33,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
             if (response.status === 200) {
                 localStorage.setItem('token', data.token);  // 存储 token
+                localStorage.setItem('justLoggedIn', 'true');
                 console.log('Login successful, redirecting...');
                 window.location.href = 'home.html';  // 登录成功后跳转到主页
             } else {

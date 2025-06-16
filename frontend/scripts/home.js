@@ -16,16 +16,20 @@ function getUserFromToken() {
 // 在页面加载时显示用户信息
 window.onload = function () {
     const user = getUserFromToken();
+    const justLoggedIn = localStorage.getItem('justLoggedIn');
+
     if (user) {
-        // 显示用户名或其他用户信息
+        // 显示用户名
         document.getElementById('welcomeMessage').innerText =
             `Welcome back, ${user.name || user.email || "Student"}`;
 
-        // 显示欢迎弹窗
-        var myModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
-        myModal.show();
+        // 仅当是刚登录完才弹出 modal
+        if (justLoggedIn === 'true') {
+            var myModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+            myModal.show();
+            localStorage.removeItem('justLoggedIn');  // 弹窗后清除
+        }
     } else {
-        // 如果没有登录，跳转到登录页面
         window.location.href = 'login.html';
     }
 };
