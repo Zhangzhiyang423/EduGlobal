@@ -403,6 +403,9 @@ html {
 .hero h1, .hero p {
     color: #fff; /* 确保文字颜色为白色 */
 }
+.bg-light {
+  background-color: #f8f9fa;
+}
 /* 推荐按钮居中 */
 .recommendation-section {
     display: flex;
