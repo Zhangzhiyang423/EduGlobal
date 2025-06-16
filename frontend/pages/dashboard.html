@@ -78,67 +78,80 @@
     <section class="dashboard-section py-5">
         <div class="container">
             <div class="row">
+
                 <!-- Program List -->
                 <div class="col-md-12">
-                    <h3 class="text-primary-blue mb-4">Matched Programs</h3>
+                    <h3 class="text-primary-blue mb-4">Viewed Programs</h3>
+                    <p class="text-muted mb-4">
+                        You’ve viewed the following programs. Click <strong>View Again</strong> to review details or
+                        compare programs.
+                    </p>
                     <div class="row">
-                        <!-- Program Card 1 -->
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <!-- Updated Image Path -->
-                                <img src="../assets/program.jpg" class="card-img-top" alt="Program Image">
-                                <div class="card-body">
-                                    <h5 class="card-title">Bachelor of Information Systems</h5>
-                                    <p class="card-text">Learn fundamental principles of information systems and their
-                                        applications in business.</p>
-                                    <p class="text-muted">3.5 years | EduGlobal | UM</p>
-                                    <!-- Link to Program Detail Page with a query parameter -->
-                                    <a href="program-details.html?program=information-systems" class="btn btn-outline-primary">View
-                                        Details</a>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Program Card 2 -->
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <!-- Updated Image Path -->
-                                <img src="../assets/program.jpg" class="card-img-top" alt="Program Image">
-                                <div class="card-body">
-                                    <h5 class="card-title">Bachelor of Software Engineering</h5>
-                                    <p class="card-text">Focus on software development, programming, and system design.
-                                    </p>
-                                    <p class="text-muted">3.5 years | EduGlobal | UM</p>
-                                    <!-- Link to Program Detail Page with a query parameter -->
-                                    <a href="program-details.html?program=software-engineering"
-                                        class="btn btn-outline-primary">View Details</a>
+                        <!-- Viewed Programs Container -->
+                            <div class="row" id="viewedProgramsContainer">
+                                <!-- Program 1 -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100 shadow-sm">
+                                        <img src="../assets/program.jpg" class="card-img-top"
+                                            alt="Bachelor of Information Systems">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Bachelor of Information Systems</h5>
+                                            <p class="card-text">Learn how to design, manage, and optimize digital
+                                                systems that support business operations.</p>
+                                            <a href="program-details.html?program=information-systems"
+                                                class="btn btn-outline-primary">View Again</a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- Program Card 3 -->
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <!-- Updated Image Path -->
-                                <img src="../assets/program.jpg" class="card-img-top" alt="Program Image">
-                                <div class="card-body">
-                                    <h5 class="card-title">Bachelor of Artificial Intelligence</h5>
-                                    <p class="card-text">Explore artificial intelligence, machine learning, and data
-                                        analytics applications.</p>
-                                    <p class="text-muted">3.5 years | EduGlobal | UM</p>
-                                    <!-- Link to Program Detail Page with a query parameter -->
-                                    <a href="program-details.html?program=artificial-intelligence"
-                                        class="btn btn-outline-primary">View Details</a>
+                                <!-- Program 2 -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100 shadow-sm">
+                                        <img src="../assets/program.jpg" class="card-img-top"
+                                            alt="Bachelor of Software Engineering">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Bachelor of Software Engineering</h5>
+                                            <p class="card-text">Focus on software development, programming, and system
+                                                design to solve real-world problems.</p>
+                                            <a href="program-details.html?program=software-engineering"
+                                                class="btn btn-outline-primary">View Again</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Program 3 -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100 shadow-sm">
+                                        <img src="../assets/program.jpg" class="card-img-top"
+                                            alt="Bachelor of Artificial Intelligence">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Bachelor of Artificial Intelligence</h5>
+                                            <p class="card-text">Explore artificial intelligence, machine learning, and
+                                                data analytics technologies.</p>
+                                            <a href="program-details.html?program=artificial-intelligence"
+                                                class="btn btn-outline-primary">View Again</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+
+
+
                     </div>
                 </div>
+
 
 
                 <!-- Sentiment Snapshot -->
                 <div class="col-md-12 mt-5">
                     <h3 class="text-primary-blue mb-4">Sentiment Snapshot</h3>
+
+                    <p class="text-muted mb-4">
+                        These charts summarize student employability satisfaction and demographic trends based on recent
+                        survey data. Use them to evaluate career outcomes and program appeal.
+                    </p>
+
                     <div class="row">
                         <!-- Satisfaction Pie Chart -->
                         <div class="col-md-6">
@@ -257,6 +270,17 @@
             },
         });
     </script>
+
+
+    <!-- 
+    backend part for histroy program might modify here
+    
+    <script src="../scripts/dashboard.js"></script>
+    <script src="../scripts/program-details.js"></script>
+
+    -->
+
+
 
 </body>
 
