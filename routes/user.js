@@ -6,7 +6,7 @@ const {
   updateUser,
   changePassword
 } = require('../controllers/userController');
-
+const jwt = require('jsonwebtoken');
 const router = express.Router();
 const authMiddleware = require('../middleware/auth'); // 用于验证 JWT 的中间件
 
