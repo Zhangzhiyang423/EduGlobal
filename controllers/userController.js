@@ -24,7 +24,7 @@ exports.registerUser = async (req, res) => {
 
         await user.save();
 
-        const token = generateToken(user._id);
+        const token = user.generateAuthToken();
         const userWithoutPassword = { ...user._doc };
         delete userWithoutPassword.password;
 
@@ -52,7 +52,7 @@ exports.loginUser = async (req, res) => {
             return res.status(401).json({ message: 'Invalid credentials' });
         }
 
-        const token = generateToken(user._id);
+        const token = user.generateAuthToken();
         const userWithoutPassword = { ...user._doc };
         delete userWithoutPassword.password;
 
@@ -83,7 +83,7 @@ exports.getUserProfile = async (req, res) => {
 // @desc    Update the profile of the logged-in user
 // @access  Private
 exports.updateUser = async (req, res) => {
-    console.log(req.body);  // 这是关键，确保你能看到实际传递的请求体
+    console.log(req.body); 
     const { name, email } = req.body;
 
     try {
@@ -131,9 +131,9 @@ exports.changePassword = async (req, res) => {
     }
 };
 
-// 生成 JWT
-const generateToken = (userId) => {
-    return jwt.sign({ id: userId }, process.env.JWT_SECRET, {
-        expiresIn: '7d',
-    });
-};
+// generte JWT
+//const generateToken = (userId) => {
+   // return jwt.sign({ id: userId }, process.env.JWT_SECRET, {
+       // expiresIn: '7d',
+   // });
+//};

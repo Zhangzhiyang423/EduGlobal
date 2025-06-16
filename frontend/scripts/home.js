@@ -6,7 +6,7 @@ function getUserFromToken() {
     // 解码 JWT token（不使用库，简单的 base64 解码）
     const base64Url = token.split('.')[1];
     const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-    const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+    const jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
         return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
     }).join(''));
 
@@ -14,11 +14,13 @@ function getUserFromToken() {
 }
 
 // 在页面加载时显示用户信息
-window.onload = function() {
+window.onload = function () {
     const user = getUserFromToken();
     if (user) {
         // 显示用户名或其他用户信息
-        document.getElementById('welcomeMessage').innerText = `Welcome back, ${user.name}`;
+        document.getElementById('welcomeMessage').innerText =
+            `Welcome back, ${user.name || user.email || "Student"}`;
+
         // 显示欢迎弹窗
         var myModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
         myModal.show();
