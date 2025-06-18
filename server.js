@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const userRoutes = require('./routes/user');
+const commentRoutes = require('./routes/comment');
 const cors = require('cors');
 const path = require('path');
 
@@ -36,6 +37,7 @@ app.use('/scripts', express.static(path.join(__dirname, 'frontend/scripts')));
 
 // 用户相关路由
 app.use('/api', userRoutes);
+app.use('/api/comments', commentRoutes);
 
 // 连接 MongoDB
 mongoose.connect(process.env.MONGO_URI, {

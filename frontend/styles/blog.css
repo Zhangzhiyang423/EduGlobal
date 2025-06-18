@@ -1,0 +1,31 @@
+/* blog.css */
+.comment-btn {
+    width: 100%;
+    padding: 8px 0;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.comment-btn.edit {
+    background-color: #7e57c2;
+    color: white;
+}
+
+.comment-btn.edit:hover {
+    background-color: #673ab7;
+}
+
+.comment-btn.delete {
+    background-color: #e57373;
+    color: white;
+}
+
+.comment-btn.delete:hover {
+    background-color: #ef5350;
+}
+
+/* 你也可以写更多博客相关的样式 */

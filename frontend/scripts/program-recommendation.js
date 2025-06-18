@@ -17,23 +17,48 @@ document.getElementById('getRecommendation').addEventListener('click', function 
     document.getElementById('aiRecommendationProgram').scrollIntoView({ behavior: 'smooth' });
 
     setTimeout(function () {
-        const recommendedPrograms = [
-            {
-                id: "information-systems",
-                title: "Bachelor of Information Systems",
-                description: "A program for students interested in information systems and technology."
-            },
-            {
-                id: "software-engineering",
-                title: "Bachelor of Software Engineering",
-                description: "A program focusing on the development of software systems."
-            },
-            {
-                id: "artificial-intelligence",
-                title: "Bachelor of Artificial Intelligence",
-                description: "A program focused on machine learning and AI technologies."
-            }
-        ];
+        const language = document.getElementById('language').value;
+        const gpa = parseFloat(document.getElementById('gpa').value);
+        const field = document.getElementById('field').value;
+
+        let recommendedPrograms = [];
+
+        if (language === 'ielts' && gpa >= 3.5 && field === 'computer-science') {
+            recommendedPrograms = [
+                {
+                    id: "information-systems",
+                    title: "Bachelor of Information Systems",
+                    description: "Strong match for CS students with good IELTS score."
+                },
+                {
+                    id: "data-science",
+                    title: "Bachelor of Data Science",
+                    description: "Ideal for students with analytical skills."
+                }
+            ];
+        } else if (language === 'toefl' && gpa >= 3.0 && field === 'engineering') {
+            recommendedPrograms = [
+                {
+                    id: "mechanical-engineering",
+                    title: "Bachelor of Mechanical Engineering",
+                    description: "Focuses on core engineering principles."
+                },
+                {
+                    id: "civil-engineering",
+                    title: "Bachelor of Civil Engineering",
+                    description: "Ideal for infrastructure-oriented students."
+                }
+            ];
+        } else {
+            // fallback
+            recommendedPrograms = [
+                {
+                    id: "general-studies",
+                    title: "Bachelor of General Studies",
+                    description: "A flexible program for exploring interests."
+                }
+            ];
+        }
 
         const programListContainer = document.getElementById('programList');
         programListContainer.innerHTML = '';

@@ -90,8 +90,9 @@
     <!-- ✅ Financial Planning and Career Forecast Section -->
     <section class="financial-job-section py-5">
         <div class="container">
+            <!-- 第一行：Financial Planning 和 ROI -->
             <div class="row">
-                <!-- Financial Planning Section -->
+                <!-- 左侧：Financial Planning -->
                 <div class="col-md-6">
                     <h3 class="text-primary-blue">Financial Planning</h3>
                     <form>
@@ -100,10 +101,8 @@
                             <select id="program" class="form-select">
                                 <option value="bachelor">Bachelor of Computer Science of Information System</option>
                                 <option value="engineering">Engineering</option>
-                                <!-- Add more options as needed -->
                             </select>
                         </div>
-
                         <div class="mb-4">
                             <label for="funding" class="form-label">Funding Type</label>
                             <select id="funding" class="form-select">
@@ -111,78 +110,73 @@
                                 <option value="scholarship">Scholarship</option>
                             </select>
                         </div>
-
-                        <!-- Get ROI Analysis button -->
                         <button type="button" class="btn btn-main" onclick="showROI()">Get ROI Analysis</button>
                     </form>
                 </div>
 
-                <!-- ROI Results Section (Initially hidden) -->
+                <!-- 右侧：ROI 结果 -->
                 <div class="col-md-6" id="roiResults" style="display: none;">
-                    <!-- ROI Explanation -->
                     <div class="roi-explanation mb-4">
                         <h4>What is ROI (Return on Investment)?</h4>
                         <p>ROI is a measure of the profitability of your educational investment. It calculates how much
                             return you can expect from the education you receive in relation to the costs of your
-                            program. The higher the ROI, the better the return on your investment.</p>
-                        <p><strong>Understanding ROI:</strong></p>
+                            program.</p>
                         <ul>
                             <li>Higher ROI means a higher return on investment, making the profession more financially
                                 rewarding.</li>
                             <li>Lower ROI indicates a lower return, meaning the profession may not offer as high a
                                 financial benefit relative to the education cost.</li>
                         </ul>
-                        <p><strong>Note:</strong> Ideally, you want to choose a career with a high ROI to ensure your
-                            educational investment is well worth it.</p>
                     </div>
-
-                    <div class="chart">
-                        <!-- Chart.js canvas -->
+                    <div class="chart-wrapper roi-chart-wrapper">
                         <canvas id="roiChart"></canvas>
                     </div>
-                </div>
 
-
-                <hr class="my-5" />
-
-                <div class="row">
-                    <!-- Career Forecast Section -->
-                    <section class="financial-job-section py-5">
-                        <div class="container">
-                            <div class="row">
-                                <!-- Career Forecast Section -->
-                                <div class="col-md-6">
-                                    <h3 class="text-primary-blue">Career Forecast</h3>
-                                    <form>
-                                        <div class="mb-4">
-                                            <label for="field" class="form-label">Preferred Field</label>
-                                            <select id="field" class="form-select">
-                                                <option value="computer-science">Computer Science</option>
-                                                <option value="engineering">Engineering</option>
-                                                <!-- Add more options as needed -->
-                                            </select>
-                                        </div>
-
-                                        <!-- Get Career Forecast button -->
-                                        <button type="button" class="btn btn-main" onclick="showCareerForecast()">Get
-                                            Career Forecast</button>
-                                    </form>
-                                </div>
-
-                                <!-- Career Forecast Results Section (Initially hidden) -->
-                                <div class="col-md-6" id="careerResults" style="display: none;">
-                                    <h4>Potential Career Tags:</h4>
-                                    <div id="tagsContainer" class="d-flex flex-wrap gap-2">
-                                        <!-- Tags will be dynamically added here -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
                 </div>
             </div>
-    </section>
 
+            <!-- 第二行：Career Forecast -->
+            <div class="row mt-3">
+                <!-- 左侧：Career Forecast -->
+                <div class="col-md-6">
+                    <h3 class="text-primary-blue">Career Forecast</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="field" class="form-label">Preferred Field</label>
+                            <select id="field" class="form-select">
+                                <option value="computer-science">Computer Science</option>
+                                <option value="engineering">Engineering</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-main" onclick="showCareerForecast()">Get Career
+                            Forecast</button>
+                    </form>
+                </div>
+
+                <!-- 右侧：Tags -->
+                <div class="col-md-6" id="careerResults" style="display: none;">
+                    <h4 class="text-primary-blue">Potential Career Tags:</h4>
+                    <div id="tagsContainer" class="d-flex flex-wrap gap-2"></div>
+                </div>
+            </div>
+
+            <!-- 第三行：图表区域 -->
+            <div class="row mt-4 align-items-start">
+                <div class="col-md-6" id="employmentPieChartContainer" style="display: none;">
+                    <h5 class="text-primary-blue chart-heading">Students' Sector Preferences (2021–2023)</h5>
+                    <div class="chart-wrapper">
+                        <canvas id="employmentPieChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-6" id="careerLineChartContainer" style="display: none;">
+                    <h5 class="text-primary-blue chart-heading">Career Growth Pathway</h5>
+                    <div class="chart-wrapper">
+                        <canvas id="careerLineChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ✅ Footer (Unified) -->
     <footer id="footer" class="footer bg-footer text-white pt-5 pb-4">

@@ -131,9 +131,18 @@ exports.changePassword = async (req, res) => {
     }
 };
 
-// generte JWT
-//const generateToken = (userId) => {
-   // return jwt.sign({ id: userId }, process.env.JWT_SECRET, {
-       // expiresIn: '7d',
-   // });
-//};
+// @route   DELETE /api/profile
+// @desc    Delete the logged-in user's account
+// @access  Private
+exports.deleteUser = async (req, res) => {
+    try {
+        const user = await User.findByIdAndDelete(req.user.id);
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+        res.status(200).json({ message: 'Account deleted successfully' });
+    } catch (err) {
+        console.error(err.message);
+        res.status(500).send('Server Error');
+    }
+};

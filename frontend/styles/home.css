@@ -84,18 +84,22 @@ h2 {
 .feature-card:hover {
     transform: translateY(-6px);
 }
+
 /* 只对第一张卡片（+1000 Courses）中的文字加粗 */
-.course-card h5, .course-card p {
+.course-card h5,
+.course-card p {
     font-weight: bold;
 }
 
 /* 只对第二张卡片（Industry Experts）中的文字加粗 */
-.expert-card h5, .expert-card p {
+.expert-card h5,
+.expert-card p {
     font-weight: bold;
 }
 
 /* 只对第三张卡片（Unlimited Access）中的文字加粗 */
-.access-card h5, .access-card p {
+.access-card h5,
+.access-card p {
     font-weight: bold;
 }
 
@@ -109,9 +113,9 @@ h2 {
 }
 
 .program-img {
-  max-width: 400px;
-  width: 100%;
-  height: auto;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
 }
 
 /* White Icon Circle */
@@ -174,8 +178,9 @@ h2 {
 .dot.red {
     background-color: #cc0000;
 }
+
 .testimonials {
-  padding-bottom: 80px;
+    padding-bottom: 80px;
 }
 
 /* Navigation Active Status Color */
@@ -183,45 +188,48 @@ h2 {
     color: #073E87 !important;
     font-weight: 600;
 }
+
 /* Footer background color */
 .bg-footer {
-  background-color: #8A79AF; 
+    background-color: #8A79AF;
 }
 
 .text-brown {
-  color: #6A3E1D;
+    color: #6A3E1D;
 }
 
 /* Socical Meida Icon */
 .social-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: white;
-  color: #8A79AF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  text-decoration: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: white;
+    color: #8A79AF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .social-icon:hover {
-  background-color: #fff;
-  color: #5246AA;
+    background-color: #fff;
+    color: #5246AA;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 .badge {
-  display: inline-block;
-  padding: 0.35em 0.65em;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #fff;
-  background-color: #4b49ac;
-  border-radius: 0.375rem;
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #4b49ac;
+    border-radius: 0.375rem;
 }
 
 
@@ -232,19 +240,27 @@ html {
 .program-details .program-details-banner {
     position: relative;
     width: 100%;
-    height: 500px; /* 控制Banner的高度 */
-    overflow: hidden; /* 隐藏溢出的部分 */
+    height: 500px;
+    /* 控制Banner的高度 */
+    overflow: hidden;
+    /* 隐藏溢出的部分 */
 }
 
 /* Title and Description Overlay */
 .overlay {
     position: absolute;
-    top: 50%;  /* 使文字垂直居中 */
-    left: 50%;  /* 使文字水平居中 */
-    transform: translate(-50%, -50%); /* 使文字完全居中 */
-    color: white; /* 文字颜色为白色 */
-    z-index: 1;  /* 确保文字在图片上方 */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* 添加文字阴影，使文字更突出 */
+    top: 50%;
+    /* 使文字垂直居中 */
+    left: 50%;
+    /* 使文字水平居中 */
+    transform: translate(-50%, -50%);
+    /* 使文字完全居中 */
+    color: white;
+    /* 文字颜色为白色 */
+    z-index: 1;
+    /* 确保文字在图片上方 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    /* 添加文字阴影，使文字更突出 */
     text-align: center;
     width: 100%;
     padding: 10px;
@@ -252,60 +268,79 @@ html {
 
 /* Program Title */
 .program-title {
-    font-size: 48px; /* 设置标题大小 */
+    font-size: 48px;
+    /* 设置标题大小 */
     font-weight: bold;
 }
 
 /* Program Description */
 .program-details-banner p {
-    font-size: 22px; /* 设置副标题字体大小 */
+    font-size: 22px;
+    /* 设置副标题字体大小 */
 }
 
 /* Banner Image */
 .program-details-banner img {
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* 确保图片覆盖整个Banner区域 */
+    object-fit: cover;
+    /* 确保图片覆盖整个Banner区域 */
 }
 
 /* Ensure overlay is within the height of the banner */
 .container.position-relative {
-    height: 100%; /* 使容器填充整个Banner高度 */
+    height: 100%;
+    /* 使容器填充整个Banner高度 */
 }
+
 /* Feature Cards */
 .feature-card {
     display: flex;
     flex-direction: column;
-    align-items: center; /* 居中内容 */
-    justify-content: center; /* 垂直居中 */
-    height: 100%; /* 确保高度为100% */
-    min-height: 250px; /* 设置最小高度 */
+    align-items: center;
+    /* 居中内容 */
+    justify-content: center;
+    /* 垂直居中 */
+    height: 100%;
+    /* 确保高度为100% */
+    min-height: 250px;
+    /* 设置最小高度 */
     padding: 20px;
-    background-color: #f8f9fa; /* 背景色 */
+    background-color: #f8f9fa;
+    /* 背景色 */
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 阴影 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* 阴影 */
     text-align: center;
 }
 
 /* Icon Styling */
 .feature-card i {
-    font-size: 40px; /* 图标大小 */
-    color: #007bff; /* 图标颜色 */
-    margin-bottom: 15px; /* 图标与标题间的间距 */
+    font-size: 40px;
+    /* 图标大小 */
+    color: #007bff;
+    /* 图标颜色 */
+    margin-bottom: 15px;
+    /* 图标与标题间的间距 */
 }
 
 /* Title Styling */
 .feature-card h5 {
-    font-size: 18px; /* 标题字体大小 */
+    font-size: 18px;
+    /* 标题字体大小 */
     font-weight: 600;
-    margin-bottom: 10px; /* 标题与文本间的间距 */
+    margin-bottom: 10px;
+    /* 标题与文本间的间距 */
 }
 
 /* Text Styling */
 .feature-card p {
-    font-size: 14px; /* 文本字体大小 */
-    color: #6c757d; /* 文本颜色 */
+    font-size: 14px;
+    /* 文本字体大小 */
+    color: #6c757d;
+    /* 文本颜色 */
 }
+
 /* Instructors Section */
 .instructors-section h2 {
     font-size: 32px;
@@ -317,25 +352,36 @@ html {
 .instructors-section h2 {
     font-size: 32px;
     font-weight: 700;
-    color: #003366;  /* 使用深蓝色与其他部分一致 */
+    color: #003366;
+    /* 使用深蓝色与其他部分一致 */
 }
 
 /* Instructor Image Container */
 .instructor-img-container {
-    width: 120px;  /* 设置固定宽度 */
-    height: 120px; /* 设置固定高度 */
-    margin: 0 auto; /* 居中容器 */
-    overflow: hidden;  /* 隐藏超出部分 */
-    border-radius: 50%;  /* 圆形容器 */
-    border: 4px solid #fff;  /* 边框样式 */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* 添加阴影 */
+    width: 120px;
+    /* 设置固定宽度 */
+    height: 120px;
+    /* 设置固定高度 */
+    margin: 0 auto;
+    /* 居中容器 */
+    overflow: hidden;
+    /* 隐藏超出部分 */
+    border-radius: 50%;
+    /* 圆形容器 */
+    border: 4px solid #fff;
+    /* 边框样式 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* 添加阴影 */
 }
 
 /* Image Styling Inside Container */
 .instructor-img {
-    width: 100%;  /* 图片宽度填充整个容器 */
-    height: 100%; /* 图片高度填充整个容器 */
-    object-fit: cover;  /* 确保图片不会变形，填满容器 */
+    width: 100%;
+    /* 图片宽度填充整个容器 */
+    height: 100%;
+    /* 图片高度填充整个容器 */
+    object-fit: cover;
+    /* 确保图片不会变形，填满容器 */
 }
 
 /* Instructor Name and Role Styling */
@@ -349,15 +395,20 @@ html {
     font-size: 14px;
     color: #555;
 }
+
 /* Syllabus Section */
 .syllabus-section h2 {
-    font-size: 32px;  /* 保持大小一致 */
+    font-size: 32px;
+    /* 保持大小一致 */
     font-weight: 700;
-    color: #003366;  /* 深蓝色 */
+    color: #003366;
+    /* 深蓝色 */
 }
+
 /* Syllabus Week Title Styling */
 .syllabus-section .col-md-6 h5 {
-    font-size: 20px;  /* 保持大小一致 */
+    font-size: 20px;
+    /* 保持大小一致 */
     font-weight: 600;
     color: #333;
 }
@@ -379,9 +430,11 @@ html {
             rgba(7, 20, 45, 0.75) 35%,
             rgba(7, 20, 45, 0.2) 80%,
             rgba(7, 20, 45, 0) 100%),
-        url('../assets/program-recommendation-banner.jpg') center center / cover no-repeat; /* 背景图和渐变 */
-    
-    min-height: 90vh; /* 保证横幅高度 */
+        url('../assets/program-recommendation-banner.jpg') center center / cover no-repeat;
+    /* 背景图和渐变 */
+
+    min-height: 90vh;
+    /* 保证横幅高度 */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -391,102 +444,138 @@ html {
     position: relative;
 
     /* 加强阴影效果，覆盖整个横幅 */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* 强化阴影效果 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    /* 强化阴影效果 */
 }
 
 /* Hero Text */
 .hero .container {
     position: relative;
-    z-index: 2; /* 确保文本层在遮罩层和背景上层 */
+    z-index: 2;
+    /* 确保文本层在遮罩层和背景上层 */
 }
 
-.hero h1, .hero p {
-    color: #fff; /* 确保文字颜色为白色 */
+.hero h1,
+.hero p {
+    color: #fff;
+    /* 确保文字颜色为白色 */
 }
+
 .bg-light {
-  background-color: #f8f9fa;
+    background-color: #f8f9fa;
 }
+
 /* 推荐按钮居中 */
 .recommendation-section {
     display: flex;
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
-    padding: 50px 0; /* 调整上下内边距，减少空间 */
-    background-color: #f8f9fa; /* 可选：为该区域添加背景色，使页面更整洁 */
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    padding: 50px 0;
+    /* 调整上下内边距，减少空间 */
+    background-color: #f8f9fa;
+    /* 可选：为该区域添加背景色，使页面更整洁 */
 }
 
 /* 推荐按钮样式 */
 #getRecommendation {
-    padding: 12px 30px; /* 增加按钮的内边距，适当增加按钮的宽度 */
-    font-size: 1.25rem; /* 增大字体大小 */
-    cursor: pointer; /* 鼠标悬停时显示手型 */
-    border-radius: 25px; /* 圆角按钮 */
-    border: none; /* 去掉按钮的边框 */
-    background-color: #5246AA; /* 紫色背景 */
+    padding: 12px 30px;
+    /* 增加按钮的内边距，适当增加按钮的宽度 */
+    font-size: 1.25rem;
+    /* 增大字体大小 */
+    cursor: pointer;
+    /* 鼠标悬停时显示手型 */
+    border-radius: 25px;
+    /* 圆角按钮 */
+    border: none;
+    /* 去掉按钮的边框 */
+    background-color: #5246AA;
+    /* 紫色背景 */
     color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 增加按钮的阴影，使其更突出 */
-    transition: all 0.3s ease; /* 给按钮添加过渡效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* 增加按钮的阴影，使其更突出 */
+    transition: all 0.3s ease;
+    /* 给按钮添加过渡效果 */
 }
 
 #getRecommendation:hover {
-    background-color: #5c47d1; /* 鼠标悬停时改变按钮背景色 */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 鼠标悬停时增大阴影 */
+    background-color: #5c47d1;
+    /* 鼠标悬停时改变按钮背景色 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* 鼠标悬停时增大阴影 */
 }
 
 /*  AI推荐标题居中 */
 .ai-recommendation-program h2 {
     text-align: center;
-    font-size: 2rem; /* 调整标题大小 */
+    font-size: 2rem;
+    /* 调整标题大小 */
     margin-bottom: 2rem;
-    color: #003366; /* 深蓝色标题 */
+    color: #003366;
+    /* 深蓝色标题 */
 }
 
 /*  卡片设置：统一卡片的大小 */
 .program-card {
-    max-width: 250px; /* 最大宽度 */
-    margin: 20px auto; /* 使卡片居中 */
-    border-radius: 15px; /* 卡片圆角 */
-    overflow: hidden; /* 防止溢出 */
-    min-height: 350px; /* 设置最小高度，确保卡片大小统一 */
+    max-width: 250px;
+    /* 最大宽度 */
+    margin: 20px auto;
+    /* 使卡片居中 */
+    border-radius: 15px;
+    /* 卡片圆角 */
+    overflow: hidden;
+    /* 防止溢出 */
+    min-height: 350px;
+    /* 设置最小高度，确保卡片大小统一 */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* 使内容均匀分布 */
+    justify-content: space-between;
+    /* 使内容均匀分布 */
 }
 
 /*  卡片样式 */
 .card {
     border: none;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 增加阴影 */
-    transition: transform 0.2s ease-in-out; /* 动画效果 */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* 增加阴影 */
+    transition: transform 0.2s ease-in-out;
+    /* 动画效果 */
 }
 
 .card:hover {
-    transform: translateY(-5px); /* 鼠标悬停时的轻微上升效果 */
+    transform: translateY(-5px);
+    /* 鼠标悬停时的轻微上升效果 */
 }
 
 .card-img-top {
     height: 150px;
-    object-fit: cover; /* 保证图片适应卡片大小 */
+    object-fit: cover;
+    /* 保证图片适应卡片大小 */
 }
 
 /*  View Details 按钮样式 */
 .card-footer .btn {
-    background-color: #5246AA; /* 紫色背景 */
+    background-color: #5246AA;
+    /* 紫色背景 */
     color: white;
     border-radius: 10px;
     padding: 8px 18px;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s ease;
-    border: none; /* 去掉按钮边框 */
+    border: none;
+    /* 去掉按钮边框 */
 }
 
 .card-footer .btn:hover {
-    background-color: #5c47d1; /* 鼠标悬停时的背景色 */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 鼠标悬停时增加阴影 */
+    background-color: #5c47d1;
+    /* 鼠标悬停时的背景色 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* 鼠标悬停时增加阴影 */
 }
 
-/*✅ Financial Details Page CSS*/
+/*✅ Financial-Job Details Page CSS*/
 
 
 
@@ -499,9 +588,11 @@ html {
             rgba(7, 20, 45, 0.75) 35%,
             rgba(7, 20, 45, 0.2) 80%,
             rgba(7, 20, 45, 0) 100%),
-        url('../assets/financial-job-banner.jpg') center center / cover no-repeat; /* 背景图和渐变 */
-    
-    min-height: 90vh; /* 保证横幅高度 */
+        url('../assets/financial-job-banner.jpg') center center / cover no-repeat;
+    /* 背景图和渐变 */
+
+    min-height: 90vh;
+    /* 保证横幅高度 */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -511,12 +602,14 @@ html {
     position: relative;
 
     /* 加强阴影效果，覆盖整个横幅 */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* 强化阴影效果 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    /* 强化阴影效果 */
 }
 
 /* Financial and Career Forecast Section Button Styling */
 .financial-job-section .btn {
-    width: 100%; /* 使按钮宽度占据100%，确保按钮独立行 */
+    width: 100%;
+    /* 使按钮宽度占据100%，确保按钮独立行 */
     padding: 12px 30px;
     font-size: 1.25rem;
     border-radius: 25px;
@@ -528,8 +621,10 @@ html {
 }
 
 .financial-job-section .btn:hover {
-    background-color: #5c47d1; /* 悬停时的背景色 */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 悬停时增大阴影 */
+    background-color: #5c47d1;
+    /* 悬停时的背景色 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* 悬停时增大阴影 */
 }
 
 /* Adjust the form container to ensure buttons align vertically */
@@ -540,77 +635,87 @@ html {
 }
 
 .financial-job-section .col-md-6 {
-    margin-bottom: 20px; /* 增加底部间距，确保按钮不重叠 */
+    margin-bottom: 20px;
+    /* 增加底部间距，确保按钮不重叠 */
 }
 
 .financial-job-section form {
     display: flex;
-    flex-direction: column; /* 确保按钮垂直排列 */
+    flex-direction: column;
+    /* 确保按钮垂直排列 */
 }
 
 .financial-job-section form .btn {
-    margin-top: 20px; /* 为按钮添加顶部间距，确保按钮之间有足够的间隔 */
+    margin-top: 20px;
+    /* 为按钮添加顶部间距，确保按钮之间有足够的间隔 */
 }
 
-/* Initially hide the result sections */
-#roiResults, #careerResults {
-    display: none;
-}
-
-/* Make sure the results appear next to each other */
-#roiResults, #careerResults {
-    display: block;
-    margin-top: 30px;
-}
-/* ROI 结果区域 */
 #roiResults {
-    display: none;  /* 默认隐藏 */
-    transition: none;  /* 禁用任何过渡动画 */
-    width: 100%; /* 确保宽度填满父容器 */
-    margin-top: 20px; /* 给结果区域加些顶部间距 */
-    padding: 20px; /* 给结果区域加些内边距 */
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    transition: none;
 }
+
 
 /* 图表容器样式 */
 .chart {
-    width: 100%; /* 让图表填满容器宽度 */
-    height: 400px; /* 固定高度，避免图表缩放 */
+    width: 100%;
+    /* 让图表填满容器宽度 */
+    height: 400px;
+    /* 固定高度，避免图表缩放 */
 }
 
 /* 设置 canvas 的尺寸 */
 #roiChart {
-    width: 100%;  /* 确保图表的宽度随父容器宽度调整 */
-    height: 100%; /* 让图表自适应容器的高度 */
+    width: 100%;
+    /* 确保图表的宽度随父容器宽度调整 */
+    height: 100%;
+    /* 让图表自适应容器的高度 */
 }
+
 /* 确保 #roiChart 图表的尺寸固定 */
 #roiChart {
-    max-width: 100%; /* 确保图表宽度最大为 100% */
-    max-height: 400px; /* 确保图表高度最大为 400px */
-    height: 100%; /* 高度100%，适应容器 */
+    max-width: 100%;
+    /* 确保图表宽度最大为 100% */
+    max-height: 400px;
+    /* 确保图表高度最大为 400px */
+    height: 100%;
+    /* 高度100%，适应容器 */
 }
+
 /* 容器的宽度和布局 */
 .row {
     display: flex;
-    justify-content: space-between; /* 让区域之间有间距 */
-    flex-wrap: wrap; /* 使得内容在小屏幕上折叠 */
+    justify-content: space-between;
+    /* 让区域之间有间距 */
+    flex-wrap: wrap;
+    /* 使得内容在小屏幕上折叠 */
 }
 
 .col-md-6 {
-    width: 48%; /* 每个区域宽度为 48% */
-    margin-bottom: 20px; /* 底部间距 */
+    width: 48%;
+    /* 每个区域宽度为 48% */
+    margin-bottom: 20px;
+    /* 底部间距 */
 }
 
 @media (max-width: 768px) {
     .col-md-6 {
-        width: 100%; /* 在小屏幕下，占满整个宽度 */
+        width: 100%;
+        /* 在小屏幕下，占满整个宽度 */
     }
 }
+
 /* ROI Explanation Section */
 .roi-explanation {
-    background-color: #f8f9fa; /* Light background to separate from the chart */
+    background-color: #f8f9fa;
+    /* Light background to separate from the chart */
     padding: 20px;
     border-radius: 8px;
-    border: 1px solid #ddd; /* Subtle border */
+    border: 1px solid #ddd;
+    /* Subtle border */
 }
 
 .roi-explanation h4 {
@@ -637,6 +742,13 @@ html {
     font-weight: bold;
 }
 
+.roi-chart-wrapper {
+    width: 100% !important;
+    max-width: 800px !important;   /* ✅ 放大 ROI 区域 */
+    margin: 0 auto !important;
+    padding: 0 !important;
+}
+
 /* Career Forcast */
 
 /* 标签样式 */
@@ -659,6 +771,23 @@ html {
     margin-top: 20px;
 }
 
+/* 控制图表大小 */
+.chart-wrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.chart-heading {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+
 /* ✅  Dashboard CSS*/
 
 
@@ -666,19 +795,27 @@ html {
 .dashboard .dashboard-banner {
     position: relative;
     width: 100%;
-    height: 500px; /* 控制Banner的高度 */
-    overflow: hidden; /* 隐藏溢出的部分 */
+    height: 500px;
+    /* 控制Banner的高度 */
+    overflow: hidden;
+    /* 隐藏溢出的部分 */
 }
 
 /* Title and Description Overlay */
 .dashboard .overlay {
     position: absolute;
-    top: 50%;  /* 使文字垂直居中 */
-    left: 50%;  /* 使文字水平居中 */
-    transform: translate(-50%, -50%); /* 使文字完全居中 */
-    color: white; /* 文字颜色为白色 */
-    z-index: 1;  /* 确保文字在图片上方 */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* 添加文字阴影，使文字更突出 */
+    top: 50%;
+    /* 使文字垂直居中 */
+    left: 50%;
+    /* 使文字水平居中 */
+    transform: translate(-50%, -50%);
+    /* 使文字完全居中 */
+    color: white;
+    /* 文字颜色为白色 */
+    z-index: 1;
+    /* 确保文字在图片上方 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    /* 添加文字阴影，使文字更突出 */
     text-align: center;
     width: 100%;
     padding: 10px;
@@ -686,25 +823,29 @@ html {
 
 /* Dashboard Title */
 .dashboard .dashboard-title {
-    font-size: 48px; /* 设置标题大小 */
+    font-size: 48px;
+    /* 设置标题大小 */
     font-weight: bold;
 }
 
 /* Dashboard Description */
 .dashboard .dashboard-banner p {
-    font-size: 22px; /* 设置副标题字体大小 */
+    font-size: 22px;
+    /* 设置副标题字体大小 */
 }
 
 /* Banner Image */
 .dashboard .dashboard-banner img {
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* 确保图片覆盖整个Banner区域 */
+    object-fit: cover;
+    /* 确保图片覆盖整个Banner区域 */
 }
 
 /* Ensure overlay is within the height of the banner */
 .dashboard .container.position-relative {
-    height: 100%; /* 使容器填充整个Banner高度 */
+    height: 100%;
+    /* 使容器填充整个Banner高度 */
 }
 
 /* ✅ Blog CSS */
@@ -717,9 +858,11 @@ html {
             rgba(7, 20, 45, 0.75) 35%,
             rgba(7, 20, 45, 0.2) 80%,
             rgba(7, 20, 45, 0) 100%),
-        url('../assets/blog-banner.jpg') center center / cover no-repeat; /* 背景图和渐变 */
-    
-    min-height: 90vh; /* 保证横幅高度 */
+        url('../assets/blog-banner.jpg') center center / cover no-repeat;
+    /* 背景图和渐变 */
+
+    min-height: 90vh;
+    /* 保证横幅高度 */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -729,38 +872,50 @@ html {
     position: relative;
 
     /* 加强阴影效果，覆盖整个横幅 */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* 强化阴影效果 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    /* 强化阴影效果 */
 }
 
 /* Hero Text */
 .hero .container {
     position: relative;
-    z-index: 2; /* 确保文本层在遮罩层和背景上层 */
+    z-index: 2;
+    /* 确保文本层在遮罩层和背景上层 */
 }
 
-.hero h1, .hero p {
-    color: #fff; /* 确保文字颜色为白色 */
+.hero h1,
+.hero p {
+    color: #fff;
+    /* 确保文字颜色为白色 */
 }
 
 /* Audio Element Styles */
 audio {
-    display: none; /* 隐藏音频播放器控件 */
+    display: none;
+    /* 隐藏音频播放器控件 */
 }
+
 /* Card Styling */
 .card {
     width: 80%;
-    height: 100%; /* Ensure all cards have the same height */
+    height: 100%;
+    /* Ensure all cards have the same height */
     display: flex;
-    flex-direction: column; /* Allow content to stack vertically */
-    justify-content: space-between; /* Ensure the content is spaced evenly */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the cards */
+    flex-direction: column;
+    /* Allow content to stack vertically */
+    justify-content: space-between;
+    /* Ensure the content is spaced evenly */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for the cards */
     overflow: hidden;
 }
 
 /* Card Body */
 .card-body {
-    flex-grow: 1; /* Allow content to take up remaining space */
+    flex-grow: 1;
+    /* Allow content to take up remaining space */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -771,22 +926,27 @@ audio {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 15px;
-    height: 60px; /* Fixed height for the title */
-    overflow: hidden; /* Prevent title overflow */
+    height: 60px;
+    /* Fixed height for the title */
+    overflow: hidden;
+    /* Prevent title overflow */
 }
 
 /* Card Text */
 .card-text {
     font-size: 1rem;
     margin-bottom: 15px;
-    height: 100px; /* Fixed height for the text */
-    overflow: hidden; /* Prevent overflow of text */
+    height: 100px;
+    /* Fixed height for the text */
+    overflow: hidden;
+    /* Prevent overflow of text */
 }
 
 /* Card Image */
 .card-img-top {
     height: 200px;
-    object-fit: cover; /* Ensure image covers the top part of the card */
+    object-fit: cover;
+    /* Ensure image covers the top part of the card */
 }
 
 
@@ -794,7 +954,8 @@ audio {
 
 /* Space between the buttons */
 .ms-3 {
-    margin-left: 1rem; /* Add space between "Load more articles" and "Add Comment" */
+    margin-left: 1rem;
+    /* Add space between "Load more articles" and "Add Comment" */
 }
 
 
@@ -804,10 +965,12 @@ audio {
 
 /* Add Comment Button */
 .btn-purple {
-    background-color: #007bff; /* Purple color for the button */
+    background-color: #007bff;
+    /* Purple color for the button */
     color: white;
     padding: 12px 30px;
-    border-radius: 30px; /* Rounded corners */
+    border-radius: 30px;
+    /* Rounded corners */
     font-weight: bold;
     text-transform: uppercase;
     font-size: 14px;
@@ -816,13 +979,16 @@ audio {
 }
 
 .btn-purple:hover {
-    background-color: #0056b3; /* Slightly darker purple on hover */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Add shadow for hover effect */
+    background-color: #0056b3;
+    /* Slightly darker purple on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Add shadow for hover effect */
 }
 
 /* Input Fields */
 .form-control {
-    border-radius: 10px; /* Rounded corners for input fields */
+    border-radius: 10px;
+    /* Rounded corners for input fields */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-size: 1rem;
     padding: 12px 15px;
@@ -839,26 +1005,33 @@ audio {
 }
 
 /* Ensures the entire page takes at least 100% of the screen height */
-html, body {
-    height: 100%; /* Full height of the page */
-    margin: 0; /* Remove default margin */
+html,
+body {
+    height: 100%;
+    /* Full height of the page */
+    margin: 0;
+    /* Remove default margin */
 }
 
 /* Apply flexbox to body to ensure content stretches */
 body {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column;
+    /* Stack elements vertically */
 }
 
 /* This ensures main content fills the remaining space */
 main {
-    flex: 1; /* Takes the remaining space to push footer down */
+    flex: 1;
+    /* Takes the remaining space to push footer down */
 }
 
 /* Footer stays at the bottom */
 footer {
-    margin-top: auto; /* Push footer to the bottom */
-    background-color: #6c5ce7; /* Footer background color */
+    margin-top: auto;
+    /* Push footer to the bottom */
+    background-color: #6c5ce7;
+    /* Footer background color */
     color: white;
     padding: 20px 0;
 }
@@ -869,13 +1042,15 @@ footer {
 
 /* Add Comment Success Section */
 .add-comment-done {
-    background-color: #f8f9fa; /* Light gray background */
+    background-color: #f8f9fa;
+    /* Light gray background */
     padding: 50px 0;
 }
 
 /* Success Message */
 .add-comment-done h2 {
-    color: #28a745; /* Green color for success message */
+    color: #28a745;
+    /* Green color for success message */
     font-weight: bold;
     font-size: 2rem;
 }
@@ -902,7 +1077,8 @@ footer {
 }
 
 .success-box h2 {
-    color: #28a745; /* Success color */
+    color: #28a745;
+    /* Success color */
     font-size: 2.5rem;
     font-weight: bold;
 }
@@ -919,23 +1095,28 @@ footer {
 /* Ensure labels are left-aligned */
 .form-label {
     text-align: left;
-    width: 100%; /* Ensures the label takes up full width */
+    width: 100%;
+    /* Ensures the label takes up full width */
 }
 
 /* Optional: Ensure the form controls are aligned as well */
 .form-control {
-    width: 100%; /* Ensure the input fields take up the full width of the container */
+    width: 100%;
+    /* Ensure the input fields take up the full width of the container */
 }
 
 /* Update the color for the tabs */
 .nav-pills .nav-link {
-    color: #5246AA; /* Apply your purple color here */
+    color: #5246AA;
+    /* Apply your purple color here */
 }
 
 /* Make the active tab background and color match */
 .nav-pills .nav-link.active {
-    background-color: #5246AA; /* Purple background */
-    color: white !important; /* Text color */
+    background-color: #5246AA;
+    /* Purple background */
+    color: white !important;
+    /* Text color */
 }
 
 
@@ -945,15 +1126,18 @@ footer {
 
 /* 增加 profile-section 的底部间距 */
 .update-profile .profile-section {
-    margin-bottom: 80px;  /* 调整与页脚之间的间距 */
+    margin-bottom: 80px;
+    /* 调整与页脚之间的间距 */
 }
 
 /* 增加按钮与输入框之间的间距 */
 .update-profile .profile-section .btn {
-    margin-top: 40px;  /* 增加按钮的上边距，距离输入框更远 */
+    margin-top: 40px;
+    /* 增加按钮的上边距，距离输入框更远 */
 }
 
 /* 增加表单元素之间的底部间距 */
 .update-profile .profile-section .form-control {
-    margin-bottom: 30px;  /* 增加输入框与下一个元素之间的间距 */
+    margin-bottom: 30px;
+    /* 增加输入框与下一个元素之间的间距 */
 }

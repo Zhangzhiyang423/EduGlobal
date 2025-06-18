@@ -4,8 +4,10 @@ const {
   loginUser,
   getUserProfile,
   updateUser,
-  changePassword
+  changePassword,
+  deleteUser // ✅ 添加这行
 } = require('../controllers/userController');
+
 const jwt = require('jsonwebtoken');
 const router = express.Router();
 const authMiddleware = require('../middleware/auth'); // 用于验证 JWT 的中间件
@@ -18,5 +20,6 @@ router.post('/login', loginUser);
 router.get('/profile', authMiddleware, getUserProfile);
 router.put('/profile', authMiddleware, updateUser);
 router.put('/change-password', authMiddleware, changePassword);
+router.delete('/profile', authMiddleware, deleteUser); // ✅ 添加这行
 
 module.exports = router;
