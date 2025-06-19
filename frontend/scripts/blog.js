@@ -19,24 +19,30 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         comments.forEach(comment => {
             const card = document.createElement("div");
-            card.className = "col-md-4 mb-4";
+            card.className = "col-md-4 mb-4";  
 
             const author = comment.userId?.name || "Unknown";
             const time = new Date(comment.createdAt).toLocaleString();
 
             card.innerHTML = `
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">${comment.title}</h5>
-                        <p class="card-text">${comment.content}</p>
-                        <p class="card-text"><small class="text-muted">Posted by <strong>${author}</strong> on ${time}</small></p>
-                        ${comment.userId?._id === currentUserId ? `
-                            <button class="btn btn-sm btn-warning" onclick="editComment('${comment._id}', '${escapeHtml(comment.title)}', '${escapeHtml(comment.content)}')">Edit</button>
-                            <button class="btn btn-sm btn-danger" onclick="deleteComment('${comment._id}')">Delete</button>
-                        ` : ''}
-                    </div>
-                </div>`;
+  <div class="card h-100 shadow-sm">
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">${comment.title}</h5>
+      <p class="card-text">${comment.content}</p>
+      <p class="mt-auto text-muted small">Posted by <strong>${author}</strong> on ${time}</p>
+      ${comment.userId?._id === currentUserId ? `
+        <div class="d-flex gap-2 mt-3">
+          <button class="btn btn-warning btn-sm w-100" onclick="editComment('${comment._id}', '${escapeHtml(comment.title)}', '${escapeHtml(comment.content)}')">Edit</button>
+          <button class="btn btn-danger btn-sm w-100" onclick="deleteComment('${comment._id}')">Delete</button>
+        </div>
+      ` : ''}
+    </div>
+  </div>
+`;
+
             listContainer.appendChild(card);
+
+
         });
     } catch (err) {
         console.error("Failed to load comments:", err);

@@ -51,26 +51,38 @@
                 <!-- Log Out Button -->
                 <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
                     <a href="login.html" class="btn btn-main">Log Out</a>
-                    <i class="bi bi-search fs-5 text-dark"></i>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- ✅ Hero Section (Dashboard Banner) -->
-    <section class="dashboard-banner">
-        <div class="container position-relative">
-            <!-- Banner Image -->
-            <img src="../assets/dashboard-banner.jpg" alt="Dashboard Banner" class="img-fluid rounded">
+    <section class="dashboard-banner position-relative">
+        <div class="container position-relative z-1">
 
-            <!-- Title and Description Overlay -->
-            <div class="overlay text-center position-absolute top-50 start-50 translate-middle">
-                <h1 class="dashboard-title">My Dashboard</h1>
-                <p class="lead">Review your matched programs, compare ROI, forecast your career path, and track student
-                    sentiment.</p>
+            <!-- ✅ 包住图片和遮罩的图片容器 -->
+            <div class="position-relative rounded overflow-hidden" style="height: 500px;">
+                <!-- ✅ 渐变遮罩只套图片范围内 -->
+                <div class="overlay-dark-gradient position-absolute top-0 start-0 w-100 h-100"></div>
+
+                <img src="../assets/dashboard-banner.jpg" alt="Dashboard Banner"
+                    class="img-fluid w-100 h-100 object-fit-cover">
+            </div>
+
+            <!-- ✅ 文字浮层 -->
+            <div class="overlay text-center position-absolute top-50 start-50 translate-middle text-white z-2">
+                <h1 class="dashboard-title">Dashboard</h1>
+                <p class="lead">
+                    Explore trending programs and gain insights into career outcomes through visualized data and student
+                    sentiment.
+
+                </p>
             </div>
         </div>
     </section>
+
+
+
 
 
 
@@ -81,60 +93,61 @@
 
                 <!-- Program List -->
                 <div class="col-md-12">
-                    <h3 class="text-primary-blue mb-4">Viewed Programs</h3>
+                    <h3 class="text-primary-blue mb-4">Top 3 Programs</h3>
                     <p class="text-muted mb-4">
-                        You’ve viewed the following programs. Click <strong>View Again</strong> to review details or
-                        compare programs.
+                        Explore some of the most popular programs. Click <strong>View Again</strong> to review details
+                        or compare options.
                     </p>
+
                     <div class="row">
 
                         <!-- Viewed Programs Container -->
-                            <div class="row" id="viewedProgramsContainer">
-                                <!-- Program 1 -->
-                                <div class="col-md-4 mb-4">
-                                    <div class="card h-100 shadow-sm">
-                                        <img src="../assets/program.jpg" class="card-img-top"
-                                            alt="Bachelor of Information Systems">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Bachelor of Information Systems</h5>
-                                            <p class="card-text">Learn how to design, manage, and optimize digital
-                                                systems that support business operations.</p>
-                                            <a href="program-details.html?program=information-systems"
-                                                class="btn btn-outline-primary">View Again</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Program 2 -->
-                                <div class="col-md-4 mb-4">
-                                    <div class="card h-100 shadow-sm">
-                                        <img src="../assets/program.jpg" class="card-img-top"
-                                            alt="Bachelor of Software Engineering">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Bachelor of Software Engineering</h5>
-                                            <p class="card-text">Focus on software development, programming, and system
-                                                design to solve real-world problems.</p>
-                                            <a href="program-details.html?program=software-engineering"
-                                                class="btn btn-outline-primary">View Again</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Program 3 -->
-                                <div class="col-md-4 mb-4">
-                                    <div class="card h-100 shadow-sm">
-                                        <img src="../assets/program.jpg" class="card-img-top"
-                                            alt="Bachelor of Artificial Intelligence">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Bachelor of Artificial Intelligence</h5>
-                                            <p class="card-text">Explore artificial intelligence, machine learning, and
-                                                data analytics technologies.</p>
-                                            <a href="program-details.html?program=artificial-intelligence"
-                                                class="btn btn-outline-primary">View Again</a>
-                                        </div>
+                        <div class="row" id="viewedProgramsContainer">
+                            <!-- Program 1 -->
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="../assets/program.jpg" class="card-img-top"
+                                        alt="Bachelor of Information Systems">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bachelor of Information Systems</h5>
+                                        <p class="card-text">Learn how to design, manage, and optimize digital
+                                            systems that support business operations.</p>
+                                        <a href="program-details.html?program=information-systems"
+                                            class="btn btn-outline-primary">View Again</a>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Program 2 -->
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="../assets/program.jpg" class="card-img-top"
+                                        alt="Bachelor of Software Engineering">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bachelor of Software Engineering</h5>
+                                        <p class="card-text">Focus on software development, programming, and system
+                                            design to solve real-world problems.</p>
+                                        <a href="program-details.html?program=software-engineering"
+                                            class="btn btn-outline-primary">View Again</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Program 3 -->
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="../assets/program.jpg" class="card-img-top"
+                                        alt="Bachelor of Artificial Intelligence">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bachelor of Artificial Intelligence</h5>
+                                        <p class="card-text">Explore artificial intelligence, machine learning, and
+                                            data analytics technologies.</p>
+                                        <a href="program-details.html?program=artificial-intelligence"
+                                            class="btn btn-outline-primary">View Again</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 
 

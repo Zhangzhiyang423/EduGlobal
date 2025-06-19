@@ -1,5 +1,8 @@
 /* ✅ Home Page Styles */
 
+.small.mb-0 {
+  color: black;
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -800,6 +803,22 @@ html {
     overflow: hidden;
     /* 隐藏溢出的部分 */
 }
+.overlay-dark-gradient {
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0) 70%);
+  z-index: 1;
+}
+
+
+.dashboard-banner .container {
+    position: relative;
+    z-index: 3;  /* ✅ 图片与文字都在遮罩之上 */
+}
+
+.dashboard-banner .overlay {
+    z-index: 4;
+}
+
 
 /* Title and Description Overlay */
 .dashboard .overlay {
@@ -926,10 +945,10 @@ audio {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 15px;
-    height: 60px;
-    /* Fixed height for the title */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    /* Prevent title overflow */
 }
 
 /* Card Text */
@@ -955,7 +974,6 @@ audio {
 /* Space between the buttons */
 .ms-3 {
     margin-left: 1rem;
-    /* Add space between "Load more articles" and "Add Comment" */
 }
 
 

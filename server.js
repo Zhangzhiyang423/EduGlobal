@@ -28,7 +28,7 @@ app.use(cors({
 app.use(express.json());
 
 // 处理静态文件（前端文件）
-app.use(express.static(path.join(__dirname, 'frontend/pages')));
+app.use('/pages', express.static(path.join(__dirname, 'frontend/pages')));
 app.use('/styles', express.static(path.join(__dirname, 'frontend/styles')));
 app.use('/assets', express.static(path.join(__dirname, 'frontend/assets')));
 app.use('/scripts', express.static(path.join(__dirname, 'frontend/scripts')));

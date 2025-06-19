@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         } else {
             commentData.forEach(comment => {
                 const card = document.createElement('div');
-                card.className = 'card mb-3';
+                card.className = "col";
                 card.innerHTML = `
                 <div class="card-body">
                     <h5 class="card-title">${comment.title || 'Untitled Comment'}</h5>

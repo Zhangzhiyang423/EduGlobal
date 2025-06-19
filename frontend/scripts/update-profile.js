@@ -9,8 +9,6 @@ document.querySelector('#updateProfileForm').addEventListener('submit', async fu
 
     const name = document.querySelector('#name').value;
     const email = document.querySelector('#email').value;
-    const password = document.querySelector('#password').value;
-    const cgpa = document.querySelector('#cgpa').value;
 
     const response = await fetch('http://localhost:3000/api/profile', {
         method: 'PUT',
@@ -21,8 +19,6 @@ document.querySelector('#updateProfileForm').addEventListener('submit', async fu
         body: JSON.stringify({
             name,         
             email,
-            password,
-            cgpa
         })
     });
 
@@ -50,6 +46,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (res.status === 200) {
         document.getElementById('name').value = data.name || '';
         document.getElementById('email').value = data.email || '';
-        document.getElementById('cgpa').value = data.cgpa || '';
     }
 });

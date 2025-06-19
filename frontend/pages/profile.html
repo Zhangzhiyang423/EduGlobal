@@ -56,7 +56,6 @@
                 </ul>
                 <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
                     <a href="login.html" class="btn btn-main">Log Out</a>
-                    <i class="bi bi-search fs-5 text-dark"></i>
                 </div>
             </div>
         </div>
@@ -91,6 +90,12 @@
                             Update Profile
                         </button>
 
+                        <!-- Reset Password -->
+                        <button type="button" class="btn btn-warning w-100 mt-2"
+                            onclick="window.location.href='profile-change-password.html';">
+                            Reset Password
+                        </button>
+
                         <!-- Delete Account Button -->
                         <button type="button" class="btn btn-danger w-100 mt-2" id="deleteAccountBtn">
                             Delete My Account
@@ -106,42 +111,51 @@
                     <ul class="nav nav-pills">
                         <li class="nav-item">
                             <a class="nav-link active tab-link" id="courseTabLink" data-bs-toggle="pill"
-                                href="#courseTab">My Course Recommendations</a>
+                                href="#courseTab" role="tab" aria-controls="courseTab" aria-selected="true">
+                                My Course Recommendations
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link tab-link" id="commentsTabLink" data-bs-toggle="pill"
-                                href="#commentsTab">My Comments</a>
+                            <a class="nav-link tab-link" id="commentsTabLink" data-bs-toggle="pill" href="#commentsTab"
+                                role="tab" aria-controls="commentsTab" aria-selected="false">
+                                My Comments
+                            </a>
                         </li>
                     </ul>
 
                     <!-- Tab Content -->
                     <div class="tab-content mt-3">
-                        <!-- My Course Recommendations -->
-                        <div class="tab-pane fade show active" id="courseTab">
+                        <!-- My Course Recommendations (active on load) -->
+                        <div id="courseTab" class="tab-pane fade show active" role="tabpanel"
+                            aria-labelledby="courseTabLink">
                             <h4 class="text-primary-blue">My Course Recommendations</h4>
-                            <div class="card mb-4">
-                                <img src="../assets/program.jpg" class="card-img-top" alt="Course Image">
-                                <div class="card-body">
-                                    <h5 class="card-title">Bachelor of Information Systems</h5>
-                                    <p class="card-text">Learn fundamental principles of architecture as an academic
-                                        subject or
-                                        a professional career by studying some of history's most important buildings.
-                                    </p>
-                                    <p class="text-muted">EduGlobal | UM | 3.5 year</p>
+
+                            <div class="row row-cols-1 row-cols-md-3 g-4" id="courseList">
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="../assets/program.jpg" class="card-img-top" alt="Course Image">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Bachelor of Information Systems</h5>
+                                            <p class="card-text">Learn fundamental principles...</p>
+                                        </div>
+                                        <div class="card-footer bg-white border-0">
+                                            <small class="text-muted">EduGlobal | UM | 3.5 year</small>
+                                        </div>
+                                    </div>
                                 </div>
+                                <!-- ⬅️ 复制更多 col 块添加更多课程 -->
                             </div>
                         </div>
 
-                        <!-- My Comments -->
-                        <div class="tab-pane fade" id="commentsTab">
+                        <!-- My Comments (initially hidden) -->
+                        <div id="commentsTab" class="tab-pane fade" role="tabpanel" aria-labelledby="commentsTabLink">
                             <h4 class="text-primary-blue">My Comments</h4>
-                            <p>No comments posted yet.</p>
-                            <!-- Add Comment Button -->
+                            <div id="myCommentsList" class="row row-cols-1 row-cols-md-3 g-4"></div>
                             <a href="add-comment.html" class="btn btn-main w-100 mt-3">Add Comment</a>
                         </div>
-
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -197,6 +211,8 @@
     </footer>
 
     <script src="../scripts/profile.js"></script>
+    <script src="../scripts/profile-my-comments.js"></script>
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
