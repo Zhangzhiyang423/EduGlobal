@@ -121,6 +121,11 @@ exports.changePassword = async (req, res) => {
             return res.status(400).json({ message: 'Incorrect old password' });
         }
 
+        const isSame = await bcrypt.compare(newPassword, user.password);
+        if (isSame) {
+            return res.status(400).json({ message: 'New password must be different from the old password' });
+        }
+
         user.password = await bcrypt.hash(newPassword, 10);
         await user.save();
 
@@ -130,6 +135,7 @@ exports.changePassword = async (req, res) => {
         res.status(500).send('Server Error');
     }
 };
+
 
 // @route   DELETE /api/profile
 // @desc    Delete the logged-in user's account
@@ -176,6 +182,11 @@ exports.resetPassword = async (req, res) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     const user = await User.findById(decoded.id);
     if (!user) return res.status(404).json({ message: 'User not found' });
+
+    const isSame = await bcrypt.compare(password, user.password);
+    if (isSame) {
+      return res.status(400).json({ message: 'New password must be different from the old password' });
+    }
 
     user.password = await bcrypt.hash(password, 10);
     await user.save();
