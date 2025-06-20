@@ -3,7 +3,6 @@ function searchProgram() {
     const searchQuery = document.getElementById('searchInput').value.trim();
 
     if (searchQuery) {
-        // 建议你将输入转为 slug 格式（可选）
         const programSlug = searchQuery.toLowerCase().replace(/\s+/g, "-");
         const targetURL = `program-details.html?program=${encodeURIComponent(programSlug)}`;
         window.location.href = targetURL;
@@ -82,5 +81,5 @@ document.getElementById('getRecommendation').addEventListener('click', function 
         });
 
         document.getElementById('aiRecommendationProgram').style.display = 'block';
-    }, 1000); // 模拟加载时间
+    }, 1000); 
 });

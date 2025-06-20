@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     const token = localStorage.getItem("token");
     let currentUserId = null;
 
-    // 解析当前登录用户 ID
     if (token) {
         try {
             const payload = JSON.parse(atob(token.split('.')[1]));
@@ -19,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         comments.forEach(comment => {
             const card = document.createElement("div");
-            card.className = "col-md-4 mb-4";  
+            card.className = "col-md-4 mb-4";
 
             const author = comment.userId?.name || "Unknown";
             const time = new Date(comment.createdAt).toLocaleString();
@@ -49,7 +48,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 });
 
-// 删除评论
+// Delete Comment
 async function deleteComment(id) {
     const token = localStorage.getItem("token");
     if (!token) {
@@ -79,11 +78,11 @@ async function deleteComment(id) {
     }
 }
 
-// 编辑评论 - 弹窗版
+// Edit Comment
 async function editComment(id, oldTitle, oldContent) {
-    // 简单弹窗编辑，可以用更好的 Modal 替代
+
     const newTitle = prompt("Edit Title:", oldTitle);
-    if (newTitle === null) return; // 用户取消
+    if (newTitle === null) return; 
     const newContent = prompt("Edit Content:", oldContent);
     if (newContent === null) return;
 
@@ -116,7 +115,7 @@ async function editComment(id, oldTitle, oldContent) {
     }
 }
 
-// 简单防止 HTML 注入的转义函数
+
 function escapeHtml(text) {
     if (!text) return "";
     return text.replace(/[&<>"']/g, function (m) {

@@ -11,9 +11,9 @@ const commentSchema = new mongoose.Schema({
   },
   userId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',   // ✅ 建立与 User 的关联
+    ref: 'User',   
     required: true
   }
-}, { timestamps: true }); // ✅ 自动生成 createdAt 和 updatedAt
+}, { timestamps: true }); 
 
 module.exports = mongoose.model('Comment', commentSchema);

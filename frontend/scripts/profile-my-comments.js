@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         myComments.forEach(comment => {
             const card = document.createElement("div");
-            card.className = "col"; // 让 Bootstrap 网格起作用
+            card.className = "col"; 
 
             const time = new Date(comment.createdAt).toLocaleString();
 

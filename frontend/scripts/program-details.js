@@ -27,11 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const programData = PROGRAM_MAP[program];
 
   if (programData) {
-    // 渲染页面
     document.getElementById("programTitle").textContent = programData.title;
     document.getElementById("programDescription").textContent = programData.description;
 
-    // 模拟后端数据结构保存到 localStorage
     const viewed = JSON.parse(localStorage.getItem("viewedPrograms")) || [];
     const exists = viewed.some(p => p.id === programData.id);
     if (!exists) {

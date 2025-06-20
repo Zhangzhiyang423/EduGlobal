@@ -12,15 +12,15 @@ const {
 
 const jwt = require('jsonwebtoken');
 const router = express.Router();
-const authMiddleware = require('../middleware/auth'); // 用于验证 JWT 的中间件
+const authMiddleware = require('../middleware/auth'); 
 
-// 公共路由
+// public routes
 router.post('/register', registerUser);
 router.post('/login', loginUser);
-router.post('/request-reset', requestPasswordReset);   // ✅ 新增
-router.post('/reset-password', resetPassword);         // ✅ 新增
+router.post('/request-reset', requestPasswordReset);   
+router.post('/reset-password', resetPassword);         
 
-// 私有路由（需要验证身份）
+// protected routes
 router.get('/profile', authMiddleware, getUserProfile);
 router.put('/profile', authMiddleware, updateUser);
 router.put('/change-password', authMiddleware, changePassword);

@@ -1,5 +1,5 @@
 document.querySelector('#updateProfileForm').addEventListener('submit', async function (e) {
-    e.preventDefault(); // 阻止默认表单提交跳转行为
+    e.preventDefault(); 
 
     const token = localStorage.getItem('token');
     if (!token) {

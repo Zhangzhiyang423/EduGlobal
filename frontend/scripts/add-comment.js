@@ -17,7 +17,7 @@ document.getElementById("commentForm").onsubmit = async function (event) {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${token}`
             },
-            body: JSON.stringify({ title, content })  // ✅ 不再传 userId
+            body: JSON.stringify({ title, content })  
         });
 
         if (response.ok) {

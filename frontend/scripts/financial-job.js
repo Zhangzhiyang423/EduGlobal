@@ -1,5 +1,4 @@
-let roiChart = null;  // 用来保存图表实例
-
+let roiChart = null;  
 function showROI() {
     console.log("Get ROI Analysis button clicked");
 
@@ -14,15 +13,15 @@ function showROI() {
     let simulatedData = [];
 
     if (program === "bachelor" && funding === "self") {
-        simulatedData = [350, 300, 200, 250]; // ROI 偏低
+        simulatedData = [350, 300, 200, 250]; 
     } else if (program === "bachelor" && funding === "scholarship") {
-        simulatedData = [520, 480, 460, 500]; // ROI 高
+        simulatedData = [520, 480, 460, 500]; 
     } else if (program === "engineering" && funding === "self") {
-        simulatedData = [280, 220, 180, 230]; // ROI 偏低
+        simulatedData = [280, 220, 180, 230]; 
     } else if (program === "engineering" && funding === "scholarship") {
-        simulatedData = [450, 430, 390, 420]; // ROI 中等偏高
+        simulatedData = [450, 430, 390, 420]; 
     } else {
-        simulatedData = [400, 350, 300, 500]; // fallback
+        simulatedData = [400, 350, 300, 500]; 
     }
 
     roiChart = new Chart(ctx, {
@@ -43,7 +42,7 @@ function showROI() {
                 y: {
                     beginAtZero: true,
                     min: 0,
-                    max: 600, // ✅ 固定最大值
+                    max: 600, 
                     ticks: {
                         stepSize: 100
                     }
@@ -67,10 +66,8 @@ const careerTagsDatabase = {
 
 // Career forecast button click handler
 function showCareerForecast() {
-    // 获取选中的 field
     const selectedField = document.getElementById('field').value;
 
-    // 生成对应 career tags（你已有的逻辑）
     const tags = careerTagsDatabase[selectedField];
     const tagsContainer = document.getElementById('tagsContainer');
     tagsContainer.innerHTML = '';
@@ -88,7 +85,6 @@ function showCareerForecast() {
         document.getElementById('careerResults').style.display = 'block';
     }
 
-    // ✅ 新增：调用画图函数，基于所选 field 加载图表
     drawChartsForField(selectedField);
 }
 
@@ -117,11 +113,10 @@ function drawChartsForField(field) {
 
     const selected = fieldData[field] || fieldData['computer-science'];
 
-    // 销毁旧图表（避免叠加）
     if (window.pieChart) window.pieChart.destroy();
     if (window.lineChart) window.lineChart.destroy();
 
-    // 📊 饼图
+    // 📊 PeiChart
     const pieCtx = document.getElementById('employmentPieChart').getContext('2d');
     window.pieChart = new Chart(pieCtx, {
         type: 'pie',
@@ -136,7 +131,7 @@ function drawChartsForField(field) {
         options: {
             responsive: true,
             maintainAspectRatio: true,
-            aspectRatio: 1,  // ✅ 添加这一行
+            aspectRatio: 1,  
             plugins: {
                 legend: { position: 'bottom' }
             }
@@ -144,7 +139,7 @@ function drawChartsForField(field) {
 
     });
 
-    // 📈 折线图
+    // 📈 Line Chart
     const lineCtx = document.getElementById('careerLineChart').getContext('2d');
     window.lineChart = new Chart(lineCtx, {
         type: 'line',
@@ -184,7 +179,7 @@ function drawChartsForField(field) {
         options: {
             responsive: true,
             maintainAspectRatio: true,
-            aspectRatio: 1,  // ✅ 添加这一行
+            aspectRatio: 1, 
             plugins: {
                 legend: { position: 'bottom' }
             },
@@ -197,7 +192,6 @@ function drawChartsForField(field) {
 
     });
 
-    // 显示图表区域
     document.getElementById('employmentPieChartContainer').style.display = 'block';
     document.getElementById('careerLineChartContainer').style.display = 'block';
 }
