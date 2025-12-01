@@ -633,13 +633,24 @@ html {
 /* Adjust the form container to ensure buttons align vertically */
 .financial-job-section .row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap !important;
     justify-content: space-between;
+    gap: 1.5rem;
 }
 
 .financial-job-section .col-md-6 {
     margin-bottom: 20px;
     /* 增加底部间距，确保按钮不重叠 */
+}
+
+.financial-job-section .col-lg-5 {
+    width: 41.66667% !important;
+    flex: 0 0 41.66667% !important;
+}
+
+.financial-job-section .col-lg-7 {
+    width: 58.33333% !important;
+    flex: 0 0 58.33333% !important;
 }
 
 .financial-job-section form {
@@ -654,7 +665,6 @@ html {
 }
 
 #roiResults {
-    display: none;
     width: 100%;
     margin: 0;
     padding: 0;

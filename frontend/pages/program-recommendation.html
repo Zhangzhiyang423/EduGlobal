@@ -95,31 +95,285 @@
     <!-- ✅ Program Recommendation Form -->
     <section class="py-5">
         <div class="container">
-            <h2 class="text-primary-blue fw-bold">Academic Information</h2>
-            <form>
-                <div class="mb-4">
-                    <label for="language" class="form-label">Current Language Qualification</label>
-                    <select id="language" class="form-select">
-                        <option value="ielts">IELTS</option>
-                        <option value="toefl">TOEFL</option>
+            <h2 class="text-primary-blue fw-bold mb-4">Tell Us About Your Background</h2>
+
+            <form id="recommendationForm">
+                <!-- Section 1: Academic Pathway -->
+                <h4 class="text-primary-blue fw-semibold mb-3">1. Academic Pathway</h4>
+
+                <div class="mb-3">
+                    <label for="qualificationType" class="form-label">Current / Planned Pre-University
+                        Qualification</label>
+                    <select id="qualificationType" class="form-select" required>
+                        <option value="">Select your qualification</option>
+                        <option value="foundation">Foundation / Matriculation / STPM</option>
+                        <option value="a_level">A-Level</option>
+                        <option value="ib">IB Diploma</option>
+                        <option value="ausmat_atar">AUSMAT / ATAR</option>
+                        <option value="highschool_other">Senior High School / UEC / Others</option>
                     </select>
                 </div>
 
                 <div class="mb-4">
-                    <label for="gpa" class="form-label">Current GPA/Grades</label>
-                    <input type="number" id="gpa" class="form-control" value="3.8" step="0.1" />
+                    <label for="overallResult" class="form-label">
+                        Overall result / predicted result
+                        <span class="text-muted small d-block">
+                            (e.g. CGPA 3.75, AAB, ATAR 85, IB 32, 80%)
+                        </span>
+                    </label>
+                    <input type="text" id="overallResult" class="form-control" required />
                 </div>
 
-                <h2 class="text-primary-blue fw-bold">Program Interest</h2>
+                <!-- Section 2: Academic Background (Stream & Subjects) -->
+                <h4 class="text-primary-blue fw-semibold mb-3">2. Academic Background</h4>
+
+                <div class="mb-3">
+                    <label class="form-label">Which best describes your pre-university stream?</label>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="streamType" id="streamScience"
+                                    value="science_technical" required>
+                                <label class="form-check-label" for="streamScience">
+                                    Science / Technical (e.g. Maths, Physics, Chemistry, Biology)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="streamType" id="streamBusiness"
+                                    value="business">
+                                <label class="form-check-label" for="streamBusiness">
+                                    Business / Accounting / Economics
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="streamType" id="streamArts"
+                                    value="arts_social">
+                                <label class="form-check-label" for="streamArts">
+                                    Arts / Humanities / Social Science
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="streamType" id="streamLanguage"
+                                    value="language">
+                                <label class="form-check-label" for="streamLanguage">
+                                    Language / Literature focused
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="streamType" id="streamMixed"
+                                    value="mixed_unknown">
+                                <label class="form-check-label" for="streamMixed">
+                                    Mixed / Not sure
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="mb-4">
-                    <label for="field" class="form-label">Preferred Field</label>
-                    <select id="field" class="form-select">
-                        <option value="computer-science">Computer Science</option>
-                        <option value="engineering">Engineering</option>
+                    <label class="form-label">Optional: which of these subjects have you taken?</label>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="hasMath">
+                                <label class="form-check-label" for="hasMath">
+                                    Mathematics or Further Mathematics
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="hasTwoScience">
+                                <label class="form-check-label" for="hasTwoScience">
+                                    At least TWO science subjects (Physics / Chemistry / Biology)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="hasCsSubject">
+                                <label class="form-check-label" for="hasCsSubject">
+                                    Computer Science / ICT / Programming
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="hasForeignLanguage">
+                                <label class="form-check-label" for="hasForeignLanguage">
+                                    Foreign language subject (Chinese / Arabic / Tamil, etc.)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: English Proficiency -->
+                <h4 class="text-primary-blue fw-semibold mb-3">3. English Proficiency</h4>
+
+                <div class="mb-3">
+                    <label for="englishTestType" class="form-label">English test</label>
+                    <select id="englishTestType" class="form-select" required>
+                        <option value="">Select your test</option>
+                        <option value="muet">MUET</option>
+                        <option value="ielts">IELTS Academic</option>
+                        <option value="toefl_ibt">TOEFL iBT</option>
+                        <option value="pte">PTE Academic</option>
+                        <option value="cambridge">Cambridge English</option>
+                        <option value="none">Not taken yet</option>
                     </select>
                 </div>
 
+                <div class="mb-4">
+                    <label for="englishScore" class="form-label">
+                        Score / band
+                        <span class="text-muted small d-block">
+                            (e.g. MUET 4.0, IELTS 6.5)
+                        </span>
+                    </label>
+                    <input type="number" step="0.5" id="englishScore" class="form-control" />
+                </div>
+
+                <!-- Section 4: Interests & Preferences -->
+                <h4 class="text-primary-blue fw-semibold mb-3">4. Interests & Preferences</h4>
+
+                <div class="mb-3">
+                    <label class="form-label">Fields you are interested in (you can choose more than one)</label>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="fieldComputing"
+                                    name="preferredFields" value="computing_it">
+                                <label class="form-check-label" for="fieldComputing">
+                                    Computing & IT
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="fieldScience" name="preferredFields"
+                                    value="science_math">
+                                <label class="form-check-label" for="fieldScience">
+                                    Science & Mathematics
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="fieldBusiness"
+                                    name="preferredFields" value="business_econ">
+                                <label class="form-check-label" for="fieldBusiness">
+                                    Business & Economics
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="fieldMedicine"
+                                    name="preferredFields" value="medicine_health">
+                                <label class="form-check-label" for="fieldMedicine">
+                                    Medicine & Health
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="fieldArts" name="preferredFields"
+                                    value="arts_social">
+                                <label class="form-check-label" for="fieldArts">
+                                    Arts & Social Sciences
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="fieldLanguages"
+                                    name="preferredFields" value="languages_linguistics">
+                                <label class="form-check-label" for="fieldLanguages">
+                                    Languages & Linguistics
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="fieldCreative"
+                                    name="preferredFields" value="creative_arts">
+                                <label class="form-check-label" for="fieldCreative">
+                                    Creative Arts & Design
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="fieldSports" name="preferredFields"
+                                    value="sports_exercise">
+                                <label class="form-check-label" for="fieldSports">
+                                    Sports & Exercise
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Your strengths</label>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="strengthNumbers" name="strengths"
+                                    value="numbers_problem">
+                                <label class="form-check-label" for="strengthNumbers">
+                                    Working with numbers and problem solving
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="strengthReading" name="strengths"
+                                    value="reading_language">
+                                <label class="form-check-label" for="strengthReading">
+                                    Reading, writing and languages
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="strengthCreative" name="strengths"
+                                    value="creative_design">
+                                <label class="form-check-label" for="strengthCreative">
+                                    Creative and design work
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="strengthPeople" name="strengths"
+                                    value="people_oriented">
+                                <label class="form-check-label" for="strengthPeople">
+                                    Working with people (teaching, counselling, teamwork)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Are you actively involved in organised sports (with evidence)?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sportsInvolvement" id="sportsYes"
+                            value="yes">
+                        <label class="form-check-label" for="sportsYes">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sportsInvolvement" id="sportsNo" value="no"
+                            checked>
+                        <label class="form-check-label" for="sportsNo">No</label>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Are you comfortable with programmes that require interview / audition /
+                        portfolio?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="interviewPortfolio" id="interviewYes"
+                            value="yes" checked>
+                        <label class="form-check-label" for="interviewYes">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="interviewPortfolio" id="interviewNo"
+                            value="no">
+                        <label class="form-check-label" for="interviewNo">No</label>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="budgetPerYear" class="form-label">
+                        Estimated maximum tuition budget per year (optional)
+                    </label>
+                    <input type="number" id="budgetPerYear" class="form-control" placeholder="e.g. 25000" />
+                </div>
             </form>
         </div>
     </section>
@@ -128,6 +382,7 @@
     <section class="recommendation-section text-center">
         <button id="getRecommendation" class="btn btn-main">Get Recommendation</button>
     </section>
+
 
     <!-- ✅ AI Recommended Programs Section -->
     <section id="aiRecommendationProgram" class="ai-recommendation-program mt-5" style="display: none;">

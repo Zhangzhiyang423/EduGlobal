@@ -1,4 +1,24 @@
 document.addEventListener("DOMContentLoaded", async function () {
+    // Populate programme filter dropdown from backend
+    var programmeFilter = document.getElementById('filter-programme');
+    if (programmeFilter) {
+        fetch('/api/')
+            .then(function (res) { return res.json(); })
+            .then(function (data) {
+                if (Array.isArray(data) && data.length) {
+                    programmeFilter.innerHTML = '<option value="">All programmes</option>';
+                    data.forEach(function (p) {
+                        var opt = document.createElement('option');
+                        opt.value = p.programmeCode || p.programme_code || '';
+                        opt.textContent = (p.programmeName || p.programme_name || 'Unnamed') + (p.faculty ? ' — ' + p.faculty : '');
+                        programmeFilter.appendChild(opt);
+                    });
+                }
+            })
+            .catch(function (err) {
+                console.warn('Failed to load programmes for filter', err);
+            });
+    }
     const listContainer = document.getElementById("commentList");
     const token = localStorage.getItem("token");
     let currentUserId = null;

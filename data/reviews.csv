@@ -1,0 +1,9 @@
+review_id,programme_code,aspect,rating,comment_title,comment_text,user_id,created_at,updated_at
+1,BCWWIEFTCV03,PROGRAMME_QUALITY,4,Good courses but heavy workload,The programme is very practical with many projects. You learn a lot but the assignments can be quite intense.,u001,2025-11-30 10:15:00,2025-11-30 10:15:00
+2,BCWWIEFTCV03,CAREER_EMPLOYABILITY,5,Strong career focus,There are many industry talks and alumni sharing sessions. It feels easy to connect with companies.,u002,2025-11-30 10:20:00,2025-11-30 10:20:00
+3,BCWWIEFTCV03,COST_LIVING_AFFORDABILITY,3,Living cost is manageable,"Rent near campus is not cheap, but food and daily expenses can be controlled if you budget carefully.",u003,2025-11-30 11:05:00,2025-11-30 11:05:00
+4,BCWWIDFTCV03,PROGRAMME_QUALITY,5,Very strong AI content,Many subjects cover machine learning and deep learning. The content feels up to date with current industry trends.,u004,2025-11-30 11:30:00,2025-11-30 11:30:00
+5,BCWWIDFTCV03,STUDENT_SUPPORT_SERVICES,4,Helpful lecturers,Lecturers and tutors are generally willing to answer questions. Admin processes can be slow sometimes.,u005,2025-11-30 11:45:00,2025-11-30 11:45:00
+6,BCWWIFFTCV03,CAMPUS_ENV_FACILITIES,4,Good study spaces,"Computer labs and study areas are comfortable, but during exam period it can be hard to find a free seat.",u006,2025-11-30 12:10:00,2025-11-30 12:10:00
+7,BCWWIFFTCV03,SOCIAL_LIFE_COMMUNITY,5,Active student community,There are many clubs and events. It is easy to meet people from different programmes.,u007,2025-11-30 12:20:00,2025-11-30 12:20:00
+8,BCWWICFTCV03,OVERALL_SATISFACTION,4,Challenging but rewarding,"The programme is not easy, but you can see your progress each semester. It is a good choice if you are motivated.",u008,2025-11-30 13:00:00,2025-11-30 13:00:00

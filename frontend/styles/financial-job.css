@@ -1,8 +1,22 @@
 /* ✅ Override Styles for Financial & Job Page Only */
+
+/* Ensure row layout is side-by-side */
+.financial-job-page .financial-job-section .row.g-4 {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 1.5rem !important;
+}
+
+.financial-job-page .financial-job-section .row.g-4 > [class*='col-'] {
+  min-width: 0;
+  flex: 0 0 auto;
+}
+
 body.financial-job-page .financial-job-section #roiResults {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
+  min-height: 0;
 }
 
 body.financial-job-page .chart-wrapper {
@@ -18,6 +32,7 @@ body.financial-job-page .chart-heading {
   font-weight: 600;
   font-size: 1.1rem;
 }
+
 .financial-job-page .financial-job-section .row + .row {
   margin-top: 0 !important;
   padding-top: 0 !important;

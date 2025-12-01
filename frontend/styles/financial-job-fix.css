@@ -1,0 +1,182 @@
+/* ✅ Financial Job Page Layout Fix (safer responsive rules) */
+
+/* Keep container from causing horizontal scroll */
+.financial-job-section {
+    /* Ensure the section grows with its content and does not create an inner scrollbar.
+       This removes any fixed height/max-height or overflow that would clip content.
+       The page's main scrollbar should be used instead. */
+    overflow: visible !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+    max-height: none !important;
+}
+
+/* Use Bootstrap grid semantics but ensure the row/gutter don't overflow */
+.financial-job-section .row.g-4 {
+    display: flex !important;
+    /* Allow rows to flex (financial-job.css sets nowrap on desktop for side-by-side layout) */
+    align-items: flex-start !important;
+    gap: 1.5rem !important;
+    box-sizing: border-box !important;
+}
+
+/* Ensure columns use box-sizing so padding doesn't add unexpected width */
+.financial-job-section .col-lg-5,
+.financial-job-section .col-lg-7 {
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+}
+
+/* Force inner form columns (col-md-12) to occupy full width inside their row */
+.financial-job-section .row > .col-md-12 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Desktop: use Bootstrap-like widths but with max-width to avoid overflow */
+@media (min-width: 992px) {
+    .financial-job-section .col-lg-5 {
+        flex: 0 0 41.66667% !important;
+        max-width: 41.66667% !important;
+    }
+    .financial-job-section .col-lg-7 {
+        flex: 0 0 58.33333% !important;
+        max-width: 58.33333% !important;
+    }
+}
+
+/* Mobile: full width */
+@media (max-width: 991.98px) {
+    .financial-job-section .col-lg-5,
+    .financial-job-section .col-lg-7 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* Chart responsiveness */
+#roiChart {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Make sure oversized buttons don't push layout horizontally */
+.financial-job-section .btn {
+    max-width: 100% !important;
+}
+
+/* Final safety: prevent body-level horizontal overflow if something still grows */
+body {
+    overflow-x: hidden !important;
+}
+
+/* Also make sure html is not allowing horizontal scroll */
+html {
+    overflow-x: hidden !important;
+}
+
+/* Contain the section so inner large absolute elements don't overflow the page */
+.financial-job-section .container {
+    overflow-x: hidden !important;
+}
+
+/* Tweak spacing for Career Forecast to avoid overlap with ROI results */
+.financial-job-section .row.mt-3 {
+    margin-top: 2.5rem !important;
+}
+
+/* Space the tags/results area a bit lower for visual separation */
+#careerResults {
+    margin-top: 1rem !important;
+}
+
+/* Chart sizing for Career Forecast: slightly smaller than ROI chart to avoid overlap */
+.financial-job-section .chart-wrapper {
+    position: relative;
+    height: 320px; /* reduced height for career charts */
+    max-width: 100%;
+}
+/* 只针对 ROI 那一张卡，强制不要被拉高 */
+.financial-job-section #roiResults .roi-card {
+    height: auto !important;      /* 不要 100% 高度 */
+    min-height: 0 !important;     /* 取消可能的 min-height */
+}
+
+/* 卡片内部 padding 小一点，白边没那么厚 */
+.financial-job-section #roiResults .roi-card .card-body {
+    padding: 0.5rem 0.75rem;
+}
+
+/* 图的容器高度你可以自己定，比如 180px */
+#roiChartWrapper {
+
+    height: 450px;
+    width: 100%;
+}
+
+#roiChart {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Smaller on medium / laptop screens to keep everything visible */
+@media (max-width: 1200px) {
+    .financial-job-section .chart-wrapper {
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .financial-job-section .chart-wrapper {
+        height: 240px;
+    }
+}
+
+/* Ensure canvases respect their container sizes */
+.financial-job-section canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Inner form rows should wrap so inputs stack vertically.
+   Target specifically the row inside the form, not the outer layout row */
+.financial-job-section form .row {
+    flex-wrap: wrap !important;
+}
+
+/* Strong safety net: prevent any child on this page from exceeding viewport width */
+.financial-job-page, .financial-job-page * {
+    box-sizing: border-box !important;
+    /* Do not constrain children to viewport width here; allow normal flow.
+       Keep overflow-wrap to avoid long words breaking layout. */
+    max-width: none !important;
+    overflow-wrap: break-word !important;
+}
+
+/* If any element is positioned absolutely and might stretch, contain it */
+.financial-job-page *[style*="position: absolute"] {
+    max-width: 100vw !important;
+    left: 0 !important;
+}
+
+/* Hide visible vertical scrollbar UI on this page while preserving scroll behavior */
+body.financial-job-page {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+body.financial-job-page::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari */
+}
+
+/* If any inner container added its own scrollbar, hide that too */
+.financial-job-page * {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+}
+.financial-job-page *::-webkit-scrollbar {
+    width: 0px !important;
+    background: transparent !important;
+}

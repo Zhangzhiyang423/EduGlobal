@@ -58,26 +58,48 @@
     <!-- ✅ Add Comment Form Section -->
     <section class="add-comment-section py-5">
         <div class="container">
-            <h2 class="text-primary-blue text-center mb-4">Add Comment</h2>
-
-            <!-- Comment Form -->
-            <form id="commentForm">
+            <h2 class="text-primary-blue text-center mb-4">Add Student Review</h2>
+            <form id="add-comment-form" action="add-comment-done.html" method="GET">
                 <div class="mb-4">
-                    <label for="commentTitle" class="form-label">Title</label>
-                    <input type="text" class="form-control" id="commentTitle" placeholder="Title of your comment"
-                        required>
+                    <label for="programme_code" class="form-label">Select Programme</label>
+                    <select class="form-select" name="programme_code" id="programme_code" required>
+                        <option value="">Select programme</option>
+                    </select>
                 </div>
-
                 <div class="mb-4">
-                    <label for="commentBody" class="form-label">Write the latest updates</label>
-                    <textarea class="form-control" id="commentBody" rows="4" placeholder="Write the latest updates"
-                        required></textarea>
+                    <label for="aspect" class="form-label">Select Aspect</label>
+                    <select class="form-select" name="aspect" id="aspect" required>
+                        <option value="">Select aspect</option>
+                        <option value="PROGRAMME_QUALITY">PROGRAMME_QUALITY</option>
+                        <option value="CAREER_EMPLOYABILITY">CAREER_EMPLOYABILITY</option>
+                        <option value="CAMPUS_ENV_FACILITIES">CAMPUS_ENV_FACILITIES</option>
+                        <option value="COST_LIVING_AFFORDABILITY">COST_LIVING_AFFORDABILITY</option>
+                        <option value="STUDENT_SUPPORT_SERVICES">STUDENT_SUPPORT_SERVICES</option>
+                        <option value="SOCIAL_LIFE_COMMUNITY">SOCIAL_LIFE_COMMUNITY</option>
+                        <option value="OVERALL_SATISFACTION">OVERALL_SATISFACTION</option>
+                    </select>
                 </div>
-
                 <div class="mb-4">
-                    <button type="submit" class="btn btn-main w-100">Post</button>
-
-                    <!-- Call submitForm function on click -->
+                    <label for="rating" class="form-label">Rating</label>
+                    <select class="form-select" name="rating" id="rating" required>
+                        <option value="">Select rating</option>
+                        <option value="1">1 - Very Poor</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 - Excellent</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="comment_title" class="form-label">Comment Title</label>
+                    <input type="text" class="form-control" name="comment_title" id="comment_title" required>
+                </div>
+                <div class="mb-4">
+                    <label for="comment_text" class="form-label">Comment Text</label>
+                    <textarea class="form-control" name="comment_text" id="comment_text" rows="4" required></textarea>
+                </div>
+                <div class="mb-4">
+                    <button type="submit" class="btn btn-main w-100">Submit</button>
                 </div>
             </form>
         </div>
@@ -136,6 +158,29 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="../scripts/add-comment.js"></script>
+        <script>
+        // Dynamically populate programme dropdown with names from CSV
+        document.addEventListener('DOMContentLoaded', async function () {
+            const select = document.getElementById('programme_code');
+            try {
+                const res = await fetch('/../data/ProgramRequirements_names_skeleton_v2.csv');
+                if (!res.ok) throw new Error('Failed to load programme list');
+                const text = await res.text();
+                const lines = text.split('\n').filter(l => l.trim());
+                lines.slice(1).forEach(line => {
+                    const cols = line.split(',');
+                    if (cols[0] && cols[1]) {
+                        const opt = document.createElement('option');
+                        opt.value = cols[0];
+                        opt.textContent = cols[1];
+                        select.appendChild(opt);
+                    }
+                });
+            } catch (err) {
+                // fallback: do nothing
+            }
+        });
+        </script>
 
 
 </body>
